@@ -1,25 +1,21 @@
-17:54:29 **** Incremental Build of configuration Debug for project 001_BLINKY ****
+18:00:48 **** Incremental Build of configuration Debug for project 001_BLINKY ****
 make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "001_BLINKY.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\001_BLINKY\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_BLINKY.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_BLINKY.elf
+ 
 arm-none-eabi-size   001_BLINKY.elf 
+arm-none-eabi-objdump -h -S  001_BLINKY.elf  > "001_BLINKY.list"
+arm-none-eabi-objcopy  -O binary  001_BLINKY.elf  "001_BLINKY.bin"
    text	   data	    bss	    dec	    hex	filename
    7664	     20	   1644	   9328	   2470	001_BLINKY.elf
 Finished building: default.size.stdout
  
-17:54:36 **** Incremental Build of configuration Debug for project 001_BLINKY ****
-make -j8 all 
-arm-none-eabi-size   001_BLINKY.elf 
-   text	   data	    bss	    dec	    hex	filename
-   7664	     20	   1644	   9328	   2470	001_BLINKY.elf
-Finished building: default.size.stdout
+Finished building: 001_BLINKY.list
+Finished building: 001_BLINKY.bin
  
-17:54:49 **** Incremental Build of configuration Debug for project 001_BLINKY ****
-make -j8 all 
-arm-none-eabi-size   001_BLINKY.elf 
-   text	   data	    bss	    dec	    hex	filename
-   7664	     20	   1644	   9328	   2470	001_BLINKY.elf
-Finished building: default.size.stdout
  
-17:55:27 **** Incremental Build of configuration Debug for project 001_BLINKY ****
+18:00:57 **** Incremental Build of configuration Debug for project 001_BLINKY ****
 make -j8 all 
 arm-none-eabi-size   001_BLINKY.elf 
    text	   data	    bss	    dec	    hex	filename
