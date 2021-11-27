@@ -1,0 +1,10 @@
+11:48:18 **** Incremental Build of configuration Debug for project bit_banding_blinky_myway ****
+make -j8 all 
+arm-none-eabi-size   bit_banding_blinky_myway.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7628	     24	   1640	   9292	   244c	bit_banding_blinky_myway.elf
+Finished building: default.size.stdout
+ 
+
+11:48:19 Build Finished. 0 errors, 0 warnings. (took 477ms)
+
