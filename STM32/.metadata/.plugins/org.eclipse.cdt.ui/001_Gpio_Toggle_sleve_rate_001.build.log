@@ -1,0 +1,10 @@
+15:22:23 **** Incremental Build of configuration Debug for project 001_Gpio_Toggle_sleve_rate_001 ****
+make -j8 all 
+arm-none-eabi-size   001_Gpio_Toggle_sleve_rate_001.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7452	     20	   1644	   9116	   239c	001_Gpio_Toggle_sleve_rate_001.elf
+Finished building: default.size.stdout
+ 
+
+15:22:23 Build Finished. 0 errors, 0 warnings. (took 478ms)
+

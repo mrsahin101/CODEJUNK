@@ -1,30 +1,24 @@
-11:48:13 **** Incremental Build of configuration Debug for project bit_banding_blinky_myway ****
+15:31:12 **** Incremental Build of configuration Debug for project 001_Gpio_Toggle_sleve_rate_002 ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c:35:31: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
-   35 | #define MY_GPIOD_BASE_ADDRESS 0x40020C00
-      |                               ^~~~~~~~~~
-../Core/Src/main.c:47:24: note: in expansion of macro 'MY_GPIOD_BASE_ADDRESS'
-   47 | uint32_t *my_pointer = MY_GPIOD_BASE_ADDRESS + MY_GPIOD_ODR_OFFSET;
-      |                        ^~~~~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "bit_banding_blinky_myway.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\bit_banding_blinky_myway\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bit_banding_blinky_myway.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: bit_banding_blinky_myway.elf
+arm-none-eabi-gcc -o "001_Gpio_Toggle_sleve_rate_002.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\001_Gpio_Toggle_sleve_rate_002\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_Gpio_Toggle_sleve_rate_002.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_Gpio_Toggle_sleve_rate_002.elf
  
-arm-none-eabi-size   bit_banding_blinky_myway.elf 
-arm-none-eabi-objdump -h -S  bit_banding_blinky_myway.elf  > "bit_banding_blinky_myway.list"
-arm-none-eabi-objcopy  -O binary  bit_banding_blinky_myway.elf  "bit_banding_blinky_myway.bin"
+arm-none-eabi-size   001_Gpio_Toggle_sleve_rate_002.elf 
+arm-none-eabi-objdump -h -S  001_Gpio_Toggle_sleve_rate_002.elf  > "001_Gpio_Toggle_sleve_rate_002.list"
+arm-none-eabi-objcopy  -O binary  001_Gpio_Toggle_sleve_rate_002.elf  "001_Gpio_Toggle_sleve_rate_002.bin"
    text	   data	    bss	    dec	    hex	filename
-   7628	     24	   1640	   9292	   244c	bit_banding_blinky_myway.elf
+   5860	     20	   1572	   7452	   1d1c	001_Gpio_Toggle_sleve_rate_002.elf
 Finished building: default.size.stdout
  
-Finished building: bit_banding_blinky_myway.bin
-Finished building: bit_banding_blinky_myway.list
+Finished building: 001_Gpio_Toggle_sleve_rate_002.list
+Finished building: 001_Gpio_Toggle_sleve_rate_002.bin
  
  
-11:48:18 **** Incremental Build of configuration Debug for project bit_banding_blinky_myway ****
+15:31:21 **** Incremental Build of configuration Debug for project 001_Gpio_Toggle_sleve_rate_002 ****
 make -j8 all 
-arm-none-eabi-size   bit_banding_blinky_myway.elf 
+arm-none-eabi-size   001_Gpio_Toggle_sleve_rate_002.elf 
    text	   data	    bss	    dec	    hex	filename
-   7628	     24	   1640	   9292	   244c	bit_banding_blinky_myway.elf
+   5860	     20	   1572	   7452	   1d1c	001_Gpio_Toggle_sleve_rate_002.elf
 Finished building: default.size.stdout
  
