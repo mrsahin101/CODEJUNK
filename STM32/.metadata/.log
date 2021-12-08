@@ -5118,3 +5118,6 @@ org.eclipse.core.runtime.CoreException: Project: 001_interrupt_introduction is c
 
 !ENTRY org.eclipse.cdt.core 1 0 2021-12-08 17:07:10.783
 !MESSAGE Indexed '001_interrupt_2pin' (21 sources, 81 headers) in 2.4 sec: 4,402 declarations; 18,229 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0088%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-12-08 17:37:46.459
+!MESSAGE Indexed '001_interrupt_priority_levels_with_m4core' (21 sources, 81 headers) in 2.49 sec: 4,402 declarations; 18,229 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0088%)
