@@ -1,0 +1,10 @@
+18:29:18 **** Incremental Build of configuration Debug for project 001_GPIO_Toggle_BIT_BANDING ****
+make -j8 all 
+arm-none-eabi-size   001_GPIO_Toggle_BIT_BANDING.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5940	     24	   1568	   7532	   1d6c	001_GPIO_Toggle_BIT_BANDING.elf
+Finished building: default.size.stdout
+ 
+
+18:29:19 Build Finished. 0 errors, 0 warnings. (took 466ms)
+
