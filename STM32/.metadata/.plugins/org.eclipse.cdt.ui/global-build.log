@@ -1,33 +1,17 @@
-18:29:12 **** Incremental Build of configuration Debug for project 001_GPIO_Toggle_BIT_BANDING ****
+17:32:12 **** Incremental Build of configuration Debug for project 001_interrupt_2pin ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c:46:46: warning: integer overflow in expression of type 'int' results in '-2113796096' [-Woverflow]
-   46 | volatile uint32_t *GPIOC_PIN8 = ((0x42000000 + (((0x40000000) + 0x00020000) + 0x0800) + 0x14) -( 0x40000000*32+(8*4)));
-      |                                              ^
-../Core/Src/main.c:46:108: warning: integer overflow in expression of type 'int' results in '0' [-Woverflow]
-   46 | volatile uint32_t *GPIOC_PIN8 = ((0x42000000 + (((0x40000000) + 0x00020000) + 0x0800) + 0x14) -( 0x40000000*32+(8*4)));
-      |                                                                                                            ^
-../Core/Src/main.c:46:33: warning: initialization of 'volatile uint32_t *' {aka 'volatile long unsigned int *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
-   46 | volatile uint32_t *GPIOC_PIN8 = ((0x42000000 + (((0x40000000) + 0x00020000) + 0x0800) + 0x14) -( 0x40000000*32+(8*4)));
-      |                                 ^
-arm-none-eabi-gcc -o "001_GPIO_Toggle_BIT_BANDING.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\001_GPIO_Toggle_BIT_BANDING\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_GPIO_Toggle_BIT_BANDING.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 001_GPIO_Toggle_BIT_BANDING.elf
+arm-none-eabi-gcc -o "001_interrupt_2pin.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\001_interrupt_2pin\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_interrupt_2pin.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_interrupt_2pin.elf
  
-arm-none-eabi-size   001_GPIO_Toggle_BIT_BANDING.elf 
-arm-none-eabi-objdump -h -S  001_GPIO_Toggle_BIT_BANDING.elf  > "001_GPIO_Toggle_BIT_BANDING.list"
-arm-none-eabi-objcopy  -O binary  001_GPIO_Toggle_BIT_BANDING.elf  "001_GPIO_Toggle_BIT_BANDING.bin"
+arm-none-eabi-size   001_interrupt_2pin.elf 
+arm-none-eabi-objdump -h -S  001_interrupt_2pin.elf  > "001_interrupt_2pin.list"
+arm-none-eabi-objcopy  -O binary  001_interrupt_2pin.elf  "001_interrupt_2pin.bin"
    text	   data	    bss	    dec	    hex	filename
-   5940	     24	   1568	   7532	   1d6c	001_GPIO_Toggle_BIT_BANDING.elf
+   6120	     20	   1572	   7712	   1e20	001_interrupt_2pin.elf
 Finished building: default.size.stdout
  
-Finished building: 001_GPIO_Toggle_BIT_BANDING.list
-Finished building: 001_GPIO_Toggle_BIT_BANDING.bin
+Finished building: 001_interrupt_2pin.list
+Finished building: 001_interrupt_2pin.bin
  
- 
-18:29:18 **** Incremental Build of configuration Debug for project 001_GPIO_Toggle_BIT_BANDING ****
-make -j8 all 
-arm-none-eabi-size   001_GPIO_Toggle_BIT_BANDING.elf 
-   text	   data	    bss	    dec	    hex	filename
-   5940	     24	   1568	   7532	   1d6c	001_GPIO_Toggle_BIT_BANDING.elf
-Finished building: default.size.stdout
  

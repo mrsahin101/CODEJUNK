@@ -11,6 +11,9 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_Gpio_Toggle_sleve_rate\ Deb
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_Gpio_Toggle_sleve_rate_001\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_Gpio_Toggle_sleve_rate_002\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_Gpio_Toggle_sleve_rate_002\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_interrupt_2pin\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_interrupt_introduction\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_interrupt_introduction\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:bit_banding_blinky\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:bit_banding_blinky\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:bit_banding_blinky_myway\ Debug/activeLaunchMode=run

@@ -1,0 +1,20 @@
+17:00:49 **** Incremental Build of configuration Debug for project 001_interrupt_introduction ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "001_interrupt_introduction.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\001_interrupt_introduction\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_interrupt_introduction.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_interrupt_introduction.elf
+ 
+arm-none-eabi-size   001_interrupt_introduction.elf 
+arm-none-eabi-objdump -h -S  001_interrupt_introduction.elf  > "001_interrupt_introduction.list"
+arm-none-eabi-objcopy  -O binary  001_interrupt_introduction.elf  "001_interrupt_introduction.bin"
+   text	   data	    bss	    dec	    hex	filename
+   6012	     20	   1572	   7604	   1db4	001_interrupt_introduction.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001_interrupt_introduction.list
+Finished building: 001_interrupt_introduction.bin
+ 
+ 
+
+17:00:50 Build Finished. 0 errors, 0 warnings. (took 1s.619ms)
+
