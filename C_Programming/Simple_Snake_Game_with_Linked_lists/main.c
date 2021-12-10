@@ -36,12 +36,14 @@ typedef struct node
 void generate_food();
 void write_score();
 void clear_memory(node *tail_ptr);
+void hidecursor();
 
 int main(void)
 {
     char key;
     system("CLS");
     system("color 0a");
+    hidecursor();
 	for(int i = 0; i < XAXIS; i++)
     {
         for (int j = 0; j < YAXIS; j++)
@@ -448,4 +450,13 @@ void clear_memory(node* tail_ptr)
         free(tail_ptr);
         tail_ptr = temp;
     }
+}
+/*I didn't understand how it works actually but still It does the job for me so i will use it*/
+void hidecursor()
+{
+   HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+   CONSOLE_CURSOR_INFO info;
+   info.dwSize = 100;
+   info.bVisible = FALSE;
+   SetConsoleCursorInfo(consoleHandle, &info);
 }
