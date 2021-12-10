@@ -1,0 +1,1 @@
+#This is simple Air Conditioner Simualtor with Embedded Programming style. Also this is good example of modular programming.
