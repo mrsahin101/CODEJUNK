@@ -1,24 +1,44 @@
-12:03:38 **** Incremental Build of configuration Debug for project 001_UART_interacting_with_console_interrupt ****
+12:37:05 **** Incremental Build of configuration Debug for project 001_UART_interacting_with_console_callbacks ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "001_UART_interacting_with_console_interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\001_UART_interacting_with_console_interrupt\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_UART_interacting_with_console_interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 001_UART_interacting_with_console_interrupt.elf
+../Core/Src/main.c: In function 'processUserInput':
+../Core/Src/main.c:91:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   91 |   sprintf(msg, "%d", opt);
+      |   ^~~~~~~
+../Core/Src/main.c:91:3: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/main.c:6:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+    5 | #include <stdlib.h>
+  +++ |+#include <stdio.h>
+    6 | /*This is the project using UART to interact with console using interrupts. Also this is using ring buffer to manage data flow*/
+../Core/Src/main.c: In function 'SystemClock_Config':
+../Core/Src/main.c:161:5: warning: implicit declaration of function 'Error_Handler' [-Wimplicit-function-declaration]
+  161 |     Error_Handler();
+      |     ^~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:224:6: warning: conflicting types for 'Error_Handler'
+  224 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:161:5: note: previous implicit declaration of 'Error_Handler' was here
+  161 |     Error_Handler();
+      |     ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "001_UART_interacting_with_console_callbacks.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\001_UART_interacting_with_console_callbacks\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_UART_interacting_with_console_callbacks.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_UART_interacting_with_console_callbacks.elf
  
-arm-none-eabi-size   001_UART_interacting_with_console_interrupt.elf 
-arm-none-eabi-objdump -h -S  001_UART_interacting_with_console_interrupt.elf  > "001_UART_interacting_with_console_interrupt.list"
-arm-none-eabi-objcopy  -O binary  001_UART_interacting_with_console_interrupt.elf  "001_UART_interacting_with_console_interrupt.bin"
+arm-none-eabi-size   001_UART_interacting_with_console_callbacks.elf 
+arm-none-eabi-objdump -h -S  001_UART_interacting_with_console_callbacks.elf  > "001_UART_interacting_with_console_callbacks.list"
+arm-none-eabi-objcopy  -O binary  001_UART_interacting_with_console_callbacks.elf  "001_UART_interacting_with_console_callbacks.bin"
    text	   data	    bss	    dec	    hex	filename
-  14892	    124	   1668	  16684	   412c	001_UART_interacting_with_console_interrupt.elf
+  14884	    124	   3684	  18692	   4904	001_UART_interacting_with_console_callbacks.elf
 Finished building: default.size.stdout
  
-Finished building: 001_UART_interacting_with_console_interrupt.bin
-Finished building: 001_UART_interacting_with_console_interrupt.list
+Finished building: 001_UART_interacting_with_console_callbacks.bin
+Finished building: 001_UART_interacting_with_console_callbacks.list
  
  
-12:03:43 **** Incremental Build of configuration Debug for project 001_UART_interacting_with_console_interrupt ****
+12:37:13 **** Incremental Build of configuration Debug for project 001_UART_interacting_with_console_callbacks ****
 make -j8 all 
-arm-none-eabi-size   001_UART_interacting_with_console_interrupt.elf 
+arm-none-eabi-size   001_UART_interacting_with_console_callbacks.elf 
    text	   data	    bss	    dec	    hex	filename
-  14892	    124	   1668	  16684	   412c	001_UART_interacting_with_console_interrupt.elf
+  14884	    124	   3684	  18692	   4904	001_UART_interacting_with_console_callbacks.elf
 Finished building: default.size.stdout
  

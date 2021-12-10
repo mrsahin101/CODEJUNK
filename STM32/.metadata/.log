@@ -2623,3 +2623,6 @@ java.io.IOException: Cannot run program "-E": Launching failed
 
 !ENTRY org.eclipse.cdt.core 1 0 2021-12-10 11:37:16.035
 !MESSAGE Indexed '001_UART_interacting_with_console_interrupt' (21 sources, 81 headers) in 2.36 sec: 4,402 declarations; 18,229 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0088%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-12-10 12:10:14.099
+!MESSAGE Indexed '001_UART_interacting_with_console_callbacks' (21 sources, 81 headers) in 2.44 sec: 4,402 declarations; 18,229 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0088%)
