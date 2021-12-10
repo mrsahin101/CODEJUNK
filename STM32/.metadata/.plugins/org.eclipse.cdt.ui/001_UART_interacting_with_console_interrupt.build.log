@@ -1,0 +1,10 @@
+12:03:43 **** Incremental Build of configuration Debug for project 001_UART_interacting_with_console_interrupt ****
+make -j8 all 
+arm-none-eabi-size   001_UART_interacting_with_console_interrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14892	    124	   1668	  16684	   412c	001_UART_interacting_with_console_interrupt.elf
+Finished building: default.size.stdout
+ 
+
+12:03:43 Build Finished. 0 errors, 0 warnings. (took 534ms)
+

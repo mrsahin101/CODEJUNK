@@ -1,28 +1,24 @@
-11:12:44 **** Incremental Build of configuration Debug for project 001_UART_interacting_with_console ****
+12:03:38 **** Incremental Build of configuration Debug for project 001_UART_interacting_with_console_interrupt ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'readUserInput':
-../Core/Src/main.c:63:9: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
-   63 |  return atoi(readBuf);
-      |         ^~~~
-arm-none-eabi-gcc -o "001_UART_interacting_with_console.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\001_UART_interacting_with_console\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_UART_interacting_with_console.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 001_UART_interacting_with_console.elf
+arm-none-eabi-gcc -o "001_UART_interacting_with_console_interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\001_UART_interacting_with_console_interrupt\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_UART_interacting_with_console_interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_UART_interacting_with_console_interrupt.elf
  
-arm-none-eabi-size   001_UART_interacting_with_console.elf 
-arm-none-eabi-objdump -h -S  001_UART_interacting_with_console.elf  > "001_UART_interacting_with_console.list"
+arm-none-eabi-size   001_UART_interacting_with_console_interrupt.elf 
+arm-none-eabi-objdump -h -S  001_UART_interacting_with_console_interrupt.elf  > "001_UART_interacting_with_console_interrupt.list"
+arm-none-eabi-objcopy  -O binary  001_UART_interacting_with_console_interrupt.elf  "001_UART_interacting_with_console_interrupt.bin"
    text	   data	    bss	    dec	    hex	filename
-  11944	    120	   1664	  13728	   35a0	001_UART_interacting_with_console.elf
-arm-none-eabi-objcopy  -O binary  001_UART_interacting_with_console.elf  "001_UART_interacting_with_console.bin"
+  14892	    124	   1668	  16684	   412c	001_UART_interacting_with_console_interrupt.elf
 Finished building: default.size.stdout
  
-Finished building: 001_UART_interacting_with_console.list
-Finished building: 001_UART_interacting_with_console.bin
+Finished building: 001_UART_interacting_with_console_interrupt.bin
+Finished building: 001_UART_interacting_with_console_interrupt.list
  
  
-11:13:01 **** Incremental Build of configuration Debug for project 001_UART_interacting_with_console ****
+12:03:43 **** Incremental Build of configuration Debug for project 001_UART_interacting_with_console_interrupt ****
 make -j8 all 
-arm-none-eabi-size   001_UART_interacting_with_console.elf 
+arm-none-eabi-size   001_UART_interacting_with_console_interrupt.elf 
    text	   data	    bss	    dec	    hex	filename
-  11944	    120	   1664	  13728	   35a0	001_UART_interacting_with_console.elf
+  14892	    124	   1668	  16684	   412c	001_UART_interacting_with_console_interrupt.elf
 Finished building: default.size.stdout
  

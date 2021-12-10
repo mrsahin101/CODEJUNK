@@ -1,0 +1,10 @@
+main.c:27:5:main	16	static
+main.c:59:8:readUserInput	16	static
+main.c:71:9:processUserInput	48	static
+main.c:97:6:HAL_UART_RxCpltCallback	16	static
+main.c:102:6:performCriticalTasks	8	static
+main.c:106:6:printWelcomeMessage	40	static
+main.c:120:6:SystemClock_Config	88	static
+main.c:167:13:MX_USART2_UART_Init	8	static
+main.c:200:13:MX_GPIO_Init	40	static
+main.c:235:6:Error_Handler	4	static,ignoring_inline_asm
