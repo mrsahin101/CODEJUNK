@@ -4,8 +4,8 @@
 #include <conio.h>
 #include <math.h>
 
-#define XAXIS 100
-#define YAXIS 20
+#define GRID_XAXIS 100
+#define GRID_YAXIS 20
 #define UP 72
 #define RIGHT 77
 #define DOWN 80
@@ -44,11 +44,11 @@ int main(void)
     system("CLS");
     system("color 0a");
     hidecursor();
-	for(int i = 0; i < XAXIS; i++)
+	for(int i = 0; i < GRID_XAXIS; i++)
     {
-        for (int j = 0; j < YAXIS; j++)
+        for (int j = 0; j < GRID_YAXIS; j++)
         {
-            if(i == 0 || j == 0 || i == (XAXIS - 1) || j == (YAXIS-1))
+            if(i == 0 || j == 0 || i == (GRID_XAXIS - 1) || j == (GRID_YAXIS-1))
             {
                 gotoxy(i,j);
                 printf("*");
@@ -217,7 +217,7 @@ int main(void)
             write_score();
             goto label1;
         }
-        if (head->x == (XAXIS - 1))
+        if (head->x == (GRID_XAXIS - 1))
         {
             system("CLS");
             printf("YOU LOST!!!\n");
@@ -323,7 +323,7 @@ int main(void)
             write_score();
             goto label3;
         }
-        if (head->y == (YAXIS - 1))
+        if (head->y == (GRID_YAXIS - 1))
         {
             system("CLS");
             printf("YOU LOST!!!\n");
@@ -409,8 +409,8 @@ void generate_food(node* tail,node* f)
     
     node* temp = NULL;
     label:
-    f->x =(rand() % (XAXIS - 2)) + 1;
-    f->y = (rand() % (YAXIS - 2)) + 1;
+    f->x =(rand() % (GRID_XAXIS - 2)) + 1;
+    f->y = (rand() % (GRID_YAXIS - 2)) + 1;
     f->next = NULL;
     f->prev = NULL;
     for (node* temp = tail; temp != NULL; temp= temp->next)
@@ -431,14 +431,14 @@ void generate_food(node* tail,node* f)
 }
 void write_score()
 {
-    gotoxy(0,YAXIS);
+    gotoxy(0,GRID_YAXIS);
     printf("SCORE: %i",score);
     if((score % 5) == 0)
     {
         level++;
         level_speed = level_speed /((float)level/(1.618));
     }
-    gotoxy(10,YAXIS);
+    gotoxy(10,GRID_YAXIS);
     printf("LEVEL: %i",level);
 } 
 void clear_memory(node* tail_ptr)
