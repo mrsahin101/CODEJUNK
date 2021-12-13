@@ -1,0 +1,10 @@
+15:49:16 **** Incremental Build of configuration Debug for project 001_UART_with_DMA_Periph_To_Memory ****
+make -j8 all 
+arm-none-eabi-size   001_UART_with_DMA_Periph_To_Memory.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9296	     20	   1732	  11048	   2b28	001_UART_with_DMA_Periph_To_Memory.elf
+Finished building: default.size.stdout
+ 
+
+15:49:16 Build Finished. 0 errors, 0 warnings. (took 483ms)
+

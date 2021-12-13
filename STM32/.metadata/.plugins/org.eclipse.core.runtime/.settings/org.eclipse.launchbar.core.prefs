@@ -16,7 +16,10 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_interacting_with_conso
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_interacting_with_console_callbacks\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_interacting_with_console_interrupt\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_with_DMA\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_with_DMA_Periph_To_Memory\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_with_DMA_with_Interrupt\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_with_DMA_with_Periph_to_Memory\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_with_DMA_with_Periph_to_Memory\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_interrupt_2pin\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_interrupt_introduction\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_interrupt_introduction\ Debug/activeLaunchTarget=null\:---
