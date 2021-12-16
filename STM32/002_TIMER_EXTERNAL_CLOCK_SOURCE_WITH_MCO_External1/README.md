@@ -1,0 +1,1 @@
+# This is using external Clock . each time it sense rising edge it increment internal counter.

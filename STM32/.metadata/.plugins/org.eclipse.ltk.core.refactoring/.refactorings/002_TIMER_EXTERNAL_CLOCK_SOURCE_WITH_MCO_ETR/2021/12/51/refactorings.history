@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;README.md&apos; to &apos;002_TIMER_EXTERNAL_CLOCK_SOURCE_WITH_MCO_ETR&apos;" description="Move &apos;README.md&apos; to &apos;002_TIMER_EXTERNAL_CLOCK_SOURCE_WITH_MCO_ETR&apos;" destination="/002_TIMER_EXTERNAL_CLOCK_SOURCE_WITH_MCO_ETR" element1="Core/Src/README.md" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1639665534930" updateReferences="true"/>
+</session>
