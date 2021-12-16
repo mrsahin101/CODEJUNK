@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_with_DMA_with_PERIPH_to_MEMORY Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_BLINKY\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_BLINKY\ Debug/activeLaunchTarget=null\:---
@@ -20,6 +20,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_with_DMA_Periph_To_Mem
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_with_DMA_with_Interrupt\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_with_DMA_with_Interrupt\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_with_DMA_with_PERIPH_to_MEMORY\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_with_DMA_with_PERIPH_to_MEMORY\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_with_DMA_with_Periph_to_Memory\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_with_DMA_with_Periph_to_Memory\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_interrupt_2pin\ Debug/activeLaunchMode=run

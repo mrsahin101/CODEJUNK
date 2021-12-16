@@ -1,0 +1,3 @@
+#This example is demostration of uart communucation with dma.Peripheral to memory. Data comes from UART peripheral. DMA2 directly transfer that data from periph(UART) to another memory (which corresponds for GPIOD registers)
+# I tried it with USART2 but it didn't work . When i tried to use USART6(which is connected to DMA2 ) it started working.
+# In STM32F4 familiy DMA1 don't have full access to Bus-Matrix so We have to use DMA2 peripheral.
