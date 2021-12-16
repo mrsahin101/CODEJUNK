@@ -1,10 +1,20 @@
-17:53:24 **** Incremental Build of configuration Debug for project 001_UART_with_DMA_with_Periph_to_Memory ****
+11:03:51 **** Incremental Build of configuration Debug for project 001_UART_with_DMA_with_PERIPH_to_MEMORY ****
 make -j8 all 
-arm-none-eabi-size   001_UART_with_DMA_with_Periph_to_Memory.elf 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "001_UART_with_DMA_with_PERIPH_to_MEMORY.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\001_UART_with_DMA_with_PERIPH_to_MEMORY\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_UART_with_DMA_with_PERIPH_to_MEMORY.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_UART_with_DMA_with_PERIPH_to_MEMORY.elf
+ 
+arm-none-eabi-size   001_UART_with_DMA_with_PERIPH_to_MEMORY.elf 
+arm-none-eabi-objdump -h -S  001_UART_with_DMA_with_PERIPH_to_MEMORY.elf  > "001_UART_with_DMA_with_PERIPH_to_MEMORY.list"
+arm-none-eabi-objcopy  -O binary  001_UART_with_DMA_with_PERIPH_to_MEMORY.elf  "001_UART_with_DMA_with_PERIPH_to_MEMORY.bin"
    text	   data	    bss	    dec	    hex	filename
-   9228	     20	   1740	  10988	   2aec	001_UART_with_DMA_with_Periph_to_Memory.elf
+   9312	     20	   1732	  11064	   2b38	001_UART_with_DMA_with_PERIPH_to_MEMORY.elf
 Finished building: default.size.stdout
  
+Finished building: 001_UART_with_DMA_with_PERIPH_to_MEMORY.bin
+Finished building: 001_UART_with_DMA_with_PERIPH_to_MEMORY.list
+ 
+ 
 
-17:53:24 Build Finished. 0 errors, 0 warnings. (took 471ms)
+11:03:52 Build Finished. 0 errors, 0 warnings. (took 1s.355ms)
 
