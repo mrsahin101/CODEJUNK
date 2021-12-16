@@ -88,7 +88,11 @@ int main(void)
   MX_GPIO_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
-HAL_TIM_Base_Start_IT(&htim1);
+  /*Starting Timer 1 in Interrupt mode here.
+   * Then implemented callback function and toggling Green Led(GPIOD-12)
+   * Everytime timer1 overflows I toggle the Green Led
+   */
+  HAL_TIM_Base_Start_IT(&htim1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
