@@ -2,3 +2,4 @@
 1639400356556	Delete resource '001_UART_with_DMA_Periph_To_Memory'
 1639408512363	Delete resource '001_UART_with_DMA_with_Periph_to_Memory'
 1639563020741	Delete resource 'nucleo-f401RE'
+1639667911319	Delete resource '002_TIMER_EXTERNAL_CLOCK_SOURCE_WITH_MCO_ETR'
