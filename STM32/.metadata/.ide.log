@@ -28083,3 +28083,11 @@
 2021-12-16 17:35:19,003 [INFO] ProjectBuilder:3832 - Time for Generating toolchain IDE Files: 2358mS.
 2021-12-16 17:35:19,004 [INFO] ProjectBuilder:2461 - Time for Copy CMSIS : 0mS.
 2021-12-16 17:35:19,006 [INFO] ProjectBuilder:2461 - Time for Copy CMSIS : 0mS.
+2021-12-16 18:17:25,796 [INFO] Activator:177 - 
+
+
+2021-12-16 18:17:25,797 [INFO] Activator:178 - !SESSION log4j initialized
+2021-12-16 18:17:32,221 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com
+2021-12-16 18:19:12,669 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-12-16 18:19:12,672 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2021-12-16 18:19:12,677 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".

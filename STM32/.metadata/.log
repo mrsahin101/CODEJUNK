@@ -3172,3 +3172,13 @@ java.lang.Exception: The project description file (.project) for '002_TIMER_EXTE
 
 !ENTRY org.eclipse.cdt.core 1 0 2021-12-16 18:19:17.175
 !MESSAGE Indexed '002_TIMER_EXTERNAL_CLOCK_SOURCE_WITH_MCO_External1' (21 sources, 99 headers) in 2,87 sec: 8.424 declarations; 41.812 references; 2 unresolved inclusions; 42 syntax errors; 147 unresolved names (%0,29)
+
+!ENTRY org.eclipse.core.resources 4 77 2021-12-16 18:21:09.804
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2021-12-16 18:21:09.804
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2021-12-16 18:21:09.804
+!MESSAGE D:\WORKSPACE\CODEJUNK\STM32\002_TIMER_EXTERNAL_CLOCK_SOURCE_WITH_MCO_External1 overlaps the location of another project: '002_TIMER_EXTERNAL_CLOCK_SOURCE_WITH_MCO_External1'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2021-12-16 18:21:09.805
+!MESSAGE Project is null
