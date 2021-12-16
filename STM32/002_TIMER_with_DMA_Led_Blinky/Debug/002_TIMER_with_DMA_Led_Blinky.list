@@ -395,7 +395,7 @@ int main(void)
   MX_TIM1_Init();
  80004e0:	f000 f884 	bl	80005ec <MX_TIM1_Init>
   /* USER CODE BEGIN 2 */
-
+  /*We are using HAL_TIM_Base_Start to start our time to work. then we start dma transfer in circular mode*/
   HAL_TIM_Base_Start(&htim1);
  80004e4:	4808      	ldr	r0, [pc, #32]	; (8000508 <main+0x48>)
  80004e6:	f001 fd6f 	bl	8001fc8 <HAL_TIM_Base_Start>
