@@ -1,0 +1,10 @@
+13:11:44 **** Incremental Build of configuration Debug for project 002_TIMER_MCO_OUTPUT ****
+make -j8 all 
+arm-none-eabi-size   002_TIMER_MCO_OUTPUT.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6004	     20	   1572	   7596	   1dac	002_TIMER_MCO_OUTPUT.elf
+Finished building: default.size.stdout
+ 
+
+13:11:45 Build Finished. 0 errors, 0 warnings. (took 486ms)
+

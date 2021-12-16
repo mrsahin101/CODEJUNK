@@ -1,0 +1,1 @@
+#This project is using mco pin to use it as timer input with simple jumper wire.

@@ -1,0 +1,10 @@
+13:49:38 **** Incremental Build of configuration Debug for project 002_TIMER_EXTERNAL_CLOCK_SOURCE_WITH_MCO ****
+make -j8 all 
+arm-none-eabi-size   002_TIMER_EXTERNAL_CLOCK_SOURCE_WITH_MCO.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8912	     20	   1644	  10576	   2950	002_TIMER_EXTERNAL_CLOCK_SOURCE_WITH_MCO.elf
+Finished building: default.size.stdout
+ 
+
+13:49:38 Build Finished. 0 errors, 0 warnings. (took 465ms)
+
