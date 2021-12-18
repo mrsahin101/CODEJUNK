@@ -3182,3 +3182,46 @@ java.lang.Exception: The project description file (.project) for '002_TIMER_EXTE
 
 !ENTRY com.st.stm32cube.common.projectcreation 4 0 2021-12-16 18:21:09.805
 !MESSAGE Project is null
+!SESSION 2021-12-17 10:22:40.907 -----------------------------------------------
+eclipse.buildId=Version 1.8.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=tr_TR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2021-12-17 10:22:48.242
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-12-17 10:22:48.313
+!MESSAGE Log4j initialized with config file D:\WORKSPACE\CODEJUNK\STM32\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-12-17 10:22:58.651
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 4 77 2021-12-17 13:39:24.477
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2021-12-17 13:39:24.477
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2021-12-17 13:39:24.477
+!MESSAGE D:\WORKSPACE\CODEJUNK\STM32\002_TIMER_EXTERNAL_CLOCK_SOURCE_WITH_MCO_External1 overlaps the location of another project: '002_TIMER_EXTERNAL_CLOCK_SOURCE_WITH_MCO_External1'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2021-12-17 13:39:24.478
+!MESSAGE Project is null
+!SESSION 2021-12-18 16:13:53.086 -----------------------------------------------
+eclipse.buildId=Version 1.8.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=tr_TR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2021-12-18 16:15:40.791
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-12-18 16:15:40.874
+!MESSAGE Log4j initialized with config file D:\WORKSPACE\CODEJUNK\STM32\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-12-18 16:15:56.790
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-12-18 16:45:42.598
+!MESSAGE Indexed '002_TIMER_CASCADE_CONNECTION' (21 sources, 81 headers) in 3.51 sec: 4,402 declarations; 18,229 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0088%)
