@@ -1,10 +1,10 @@
-18:10:42 **** Incremental Build of configuration Debug for project 002_TIMER_CASCADE_CONNECTION ****
+10:08:56 **** Incremental Build of configuration Debug for project 002_TIMER_CASCADE_CONNECTION ****
 make -j8 all 
 arm-none-eabi-size   002_TIMER_CASCADE_CONNECTION.elf 
    text	   data	    bss	    dec	    hex	filename
-   8748	     20	   1716	  10484	   28f4	002_TIMER_CASCADE_CONNECTION.elf
+   9956	     20	   1716	  11692	   2dac	002_TIMER_CASCADE_CONNECTION.elf
 Finished building: default.size.stdout
  
 
-18:10:43 Build Finished. 0 errors, 0 warnings. (took 622ms)
+10:08:57 Build Finished. 0 errors, 0 warnings. (took 471ms)
 
