@@ -1,1 +1,2 @@
 #This is example of how to trigger timer with software . 
+This could be usefull but maybe its not the great way to use it for precise time generation. because i did some testing and didnt see to be generating precise times
