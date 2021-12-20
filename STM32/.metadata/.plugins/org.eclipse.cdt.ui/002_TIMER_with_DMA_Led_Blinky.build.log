@@ -1,4 +1,4 @@
-09:56:09 **** Incremental Build of configuration Debug for project 002_TIMER_with_DMA_Led_Blinky ****
+15:37:39 **** Incremental Build of configuration Debug for project 002_TIMER_with_DMA_Led_Blinky ****
 make -j8 all 
 arm-none-eabi-size   002_TIMER_with_DMA_Led_Blinky.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   002_TIMER_with_DMA_Led_Blinky.elf
 Finished building: default.size.stdout
  
 
-09:56:09 Build Finished. 0 errors, 0 warnings. (took 474ms)
+15:37:40 Build Finished. 0 errors, 0 warnings. (took 474ms)
 

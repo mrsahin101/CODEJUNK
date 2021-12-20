@@ -103,8 +103,8 @@ HAL_TIM_Base_Start_IT(&htim8);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  HAL_TIM_GenerateEvent(&htim1, TIM_EVENTSOURCE_UPDATE);
-	 HAL_Delay(10);
+	 HAL_TIM_GenerateEvent(&htim1, TIM_EVENTSOURCE_UPDATE);
+	 HAL_Delay(100);
   }
   /* USER CODE END 3 */
 }
