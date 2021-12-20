@@ -1,0 +1,1 @@
+#This is example of how to trigger timer with software . 

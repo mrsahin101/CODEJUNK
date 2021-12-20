@@ -3240,3 +3240,6 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-12-20 09:57:07.835
 !MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-12-20 10:56:40.489
+!MESSAGE Indexed '002_TIMER_EVENT_GENERATION' (21 sources, 81 headers) in 3.25 sec: 4,402 declarations; 18,229 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0088%)

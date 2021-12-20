@@ -1,0 +1,10 @@
+11:37:49 **** Incremental Build of configuration Debug for project 002_TIMER_EVENT_GENERATION ****
+make -j8 all 
+arm-none-eabi-size   002_TIMER_EVENT_GENERATION.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9444	     20	   1716	  11180	   2bac	002_TIMER_EVENT_GENERATION.elf
+Finished building: default.size.stdout
+ 
+
+11:37:49 Build Finished. 0 errors, 0 warnings. (took 481ms)
+
