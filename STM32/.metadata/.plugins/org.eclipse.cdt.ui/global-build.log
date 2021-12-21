@@ -1,21 +1,24 @@
-17:15:18 **** Incremental Build of configuration Debug for project 002_TIMER_PWM_GENERATION ****
+17:57:40 **** Incremental Build of configuration Debug for project 002_TIMER_PWM_SIN_WAVE_GENERATION ****
 make -j8 all 
-arm-none-eabi-size   002_TIMER_PWM_GENERATION.elf 
-   text	   data	    bss	    dec	    hex	filename
-   9016	     20	   1644	  10680	   29b8	002_TIMER_PWM_GENERATION.elf
-Finished building: default.size.stdout
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "002_TIMER_PWM_SIN_WAVE_GENERATION.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\002_TIMER_PWM_SIN_WAVE_GENERATION\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="002_TIMER_PWM_SIN_WAVE_GENERATION.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 002_TIMER_PWM_SIN_WAVE_GENERATION.elf
  
-17:15:33 **** Incremental Build of configuration Debug for project 002_TIMER_PWM_GENERATION ****
-make -j8 all 
-arm-none-eabi-size   002_TIMER_PWM_GENERATION.elf 
+arm-none-eabi-size   002_TIMER_PWM_SIN_WAVE_GENERATION.elf 
+arm-none-eabi-objdump -h -S  002_TIMER_PWM_SIN_WAVE_GENERATION.elf  > "002_TIMER_PWM_SIN_WAVE_GENERATION.list"
+arm-none-eabi-objcopy  -O binary  002_TIMER_PWM_SIN_WAVE_GENERATION.elf  "002_TIMER_PWM_SIN_WAVE_GENERATION.bin"
    text	   data	    bss	    dec	    hex	filename
-   9016	     20	   1644	  10680	   29b8	002_TIMER_PWM_GENERATION.elf
+  17732	     20	   1740	  19492	   4c24	002_TIMER_PWM_SIN_WAVE_GENERATION.elf
 Finished building: default.size.stdout
+Finished building: 002_TIMER_PWM_SIN_WAVE_GENERATION.bin
  
-17:16:10 **** Incremental Build of configuration Debug for project 002_TIMER_PWM_GENERATION ****
+Finished building: 002_TIMER_PWM_SIN_WAVE_GENERATION.list
+ 
+ 
+17:57:50 **** Incremental Build of configuration Debug for project 002_TIMER_PWM_SIN_WAVE_GENERATION ****
 make -j8 all 
-arm-none-eabi-size   002_TIMER_PWM_GENERATION.elf 
+arm-none-eabi-size   002_TIMER_PWM_SIN_WAVE_GENERATION.elf 
    text	   data	    bss	    dec	    hex	filename
-   9016	     20	   1644	  10680	   29b8	002_TIMER_PWM_GENERATION.elf
+  17732	     20	   1740	  19492	   4c24	002_TIMER_PWM_SIN_WAVE_GENERATION.elf
 Finished building: default.size.stdout
  

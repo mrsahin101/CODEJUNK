@@ -1,0 +1,1 @@
+#This is example of sin wave generation. Basic approx of sin wave. we can smooth it with capacitors
