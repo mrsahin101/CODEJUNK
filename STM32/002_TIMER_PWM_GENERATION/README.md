@@ -1,0 +1,1 @@
+#Pwm generation example in while loop. not usefull but good for starting point

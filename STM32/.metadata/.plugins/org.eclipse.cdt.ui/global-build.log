@@ -1,37 +1,21 @@
-16:59:18 **** Incremental Build of configuration Debug for project 002_TIMER_OUTPUT_COMPARE_with_DMA ****
+17:15:18 **** Incremental Build of configuration Debug for project 002_TIMER_PWM_GENERATION ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:101:47: warning: passing argument 3 of 'HAL_TIM_OC_Start_DMA' makes pointer from integer without a cast [-Wint-conversion]
-  101 |   HAL_TIM_OC_Start_DMA(&htim1, TIM_CHANNEL_1, (uint32_t)ch1IV, sizeof(ch1IV));
-      |                                               ^~~~~~~~~~~~~~~
-      |                                               |
-      |                                               long unsigned int
-In file included from ../Core/Inc/stm32f4xx_hal_conf.h:403,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1902:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'long unsigned int'
- 1902 | HAL_StatusTypeDef HAL_TIM_OC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
-      |                                                                                   ~~~~~~~~~~^~~~~
-arm-none-eabi-gcc -o "002_TIMER_OUTPUT_COMPARE_with_DMA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\002_TIMER_OUTPUT_COMPARE_with_DMA\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="002_TIMER_OUTPUT_COMPARE_with_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 002_TIMER_OUTPUT_COMPARE_with_DMA.elf
- 
-arm-none-eabi-size   002_TIMER_OUTPUT_COMPARE_with_DMA.elf 
-arm-none-eabi-objdump -h -S  002_TIMER_OUTPUT_COMPARE_with_DMA.elf  > "002_TIMER_OUTPUT_COMPARE_with_DMA.list"
-arm-none-eabi-objcopy  -O binary  002_TIMER_OUTPUT_COMPARE_with_DMA.elf  "002_TIMER_OUTPUT_COMPARE_with_DMA.bin"
+arm-none-eabi-size   002_TIMER_PWM_GENERATION.elf 
    text	   data	    bss	    dec	    hex	filename
-  12760	     20	   1740	  14520	   38b8	002_TIMER_OUTPUT_COMPARE_with_DMA.elf
+   9016	     20	   1644	  10680	   29b8	002_TIMER_PWM_GENERATION.elf
 Finished building: default.size.stdout
-Finished building: 002_TIMER_OUTPUT_COMPARE_with_DMA.bin
  
-Finished building: 002_TIMER_OUTPUT_COMPARE_with_DMA.list
- 
- 
-16:59:24 **** Incremental Build of configuration Debug for project 002_TIMER_OUTPUT_COMPARE_with_DMA ****
+17:15:33 **** Incremental Build of configuration Debug for project 002_TIMER_PWM_GENERATION ****
 make -j8 all 
-arm-none-eabi-size   002_TIMER_OUTPUT_COMPARE_with_DMA.elf 
+arm-none-eabi-size   002_TIMER_PWM_GENERATION.elf 
    text	   data	    bss	    dec	    hex	filename
-  12760	     20	   1740	  14520	   38b8	002_TIMER_OUTPUT_COMPARE_with_DMA.elf
+   9016	     20	   1644	  10680	   29b8	002_TIMER_PWM_GENERATION.elf
+Finished building: default.size.stdout
+ 
+17:16:10 **** Incremental Build of configuration Debug for project 002_TIMER_PWM_GENERATION ****
+make -j8 all 
+arm-none-eabi-size   002_TIMER_PWM_GENERATION.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9016	     20	   1644	  10680	   29b8	002_TIMER_PWM_GENERATION.elf
 Finished building: default.size.stdout
  
