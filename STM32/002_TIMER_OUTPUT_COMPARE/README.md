@@ -1,0 +1,1 @@
+## This is Output compare example in interrupt mode. I write small function to give it little dynamic feature
