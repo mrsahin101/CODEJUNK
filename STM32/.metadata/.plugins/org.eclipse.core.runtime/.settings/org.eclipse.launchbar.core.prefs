@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_OUTPUT_COMPARE
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_OUTPUT_COMPARE_with_DMA Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_BLINKY\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_BLINKY\ Debug/activeLaunchTarget=null\:---
@@ -38,6 +38,9 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_INPUT_CAPTURE\ Debug/
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_MCO_OUTPUT\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_OUTPUT_COMPARE/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_OUTPUT_COMPARE/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_OUTPUT_COMPARE_DMA\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_OUTPUT_COMPARE_DMA\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_OUTPUT_COMPARE_with_DMA\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_with_DMA_Led_Blinky\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_with_DMA_Led_Blinky\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_with_INTERRUPT\ Debug/activeLaunchMode=run

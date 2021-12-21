@@ -1,0 +1,1 @@
+#In this example I am using DMA to generate output compare signals.also we can use doing pwm with this same approach

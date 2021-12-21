@@ -1,0 +1,10 @@
+16:59:24 **** Incremental Build of configuration Debug for project 002_TIMER_OUTPUT_COMPARE_with_DMA ****
+make -j8 all 
+arm-none-eabi-size   002_TIMER_OUTPUT_COMPARE_with_DMA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12760	     20	   1740	  14520	   38b8	002_TIMER_OUTPUT_COMPARE_with_DMA.elf
+Finished building: default.size.stdout
+ 
+
+16:59:24 Build Finished. 0 errors, 0 warnings. (took 549ms)
+
