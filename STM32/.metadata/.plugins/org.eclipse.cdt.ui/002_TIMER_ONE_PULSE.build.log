@@ -1,0 +1,10 @@
+15:33:05 **** Incremental Build of configuration Debug for project 002_TIMER_ONE_PULSE ****
+make -j8 all 
+arm-none-eabi-size   002_TIMER_ONE_PULSE.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9504	     20	   1644	  11168	   2ba0	002_TIMER_ONE_PULSE.elf
+Finished building: default.size.stdout
+ 
+
+15:33:07 Build Finished. 0 errors, 0 warnings. (took 1s.698ms)
+

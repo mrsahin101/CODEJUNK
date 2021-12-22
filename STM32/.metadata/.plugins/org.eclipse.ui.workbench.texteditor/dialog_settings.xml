@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="HAL_TIM_OC_Start_DMA"/>
+		<item key="selection" value="HAL_TIM_OnePulse_Init"/>
 		<list key="findhistory">
+			<item value="HAL_TIM_OnePulse_Init"/>
+			<item value="HAL_TIM_OnePulse_Start"/>
 			<item value="HAL_TIM_OC_Start_DMA"/>
 			<item value="hal_tim_base_Start"/>
 			<item value="OscillatorType"/>
