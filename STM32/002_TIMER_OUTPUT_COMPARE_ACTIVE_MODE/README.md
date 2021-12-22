@@ -1,0 +1,1 @@
+#This is for setting output compare pin on delay. we can use it as Timer on delay.

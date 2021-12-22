@@ -1,0 +1,10 @@
+09:52:04 **** Incremental Build of configuration Debug for project 002_TIMER_OUTPUT_COMPARE_ACTIVE_MODE ****
+make -j8 all 
+arm-none-eabi-size   002_TIMER_OUTPUT_COMPARE_ACTIVE_MODE.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9472	     20	   1644	  11136	   2b80	002_TIMER_OUTPUT_COMPARE_ACTIVE_MODE.elf
+Finished building: default.size.stdout
+ 
+
+09:52:05 Build Finished. 0 errors, 0 warnings. (took 802ms)
+
