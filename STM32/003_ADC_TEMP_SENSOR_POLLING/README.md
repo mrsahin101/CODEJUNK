@@ -1,0 +1,1 @@
+#This example measuring cpu temp via adc and printing it to serial port via uart.
