@@ -50,6 +50,8 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_PWM_SIN_WAVE_GENERATI
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_with_DMA_Led_Blinky\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_with_DMA_Led_Blinky\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_with_INTERRUPT\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_ADC_TEMP_SENSOR_INTERRUPT\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_ADC_TEMP_SENSOR_INTERRUPT\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_ADC_TEMP_SENSOR_POLLING\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_ADC_TEMP_SENSOR_POLLING\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:bit_banding_blinky\ Debug/activeLaunchMode=run

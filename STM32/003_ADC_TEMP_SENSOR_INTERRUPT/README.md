@@ -1,0 +1,1 @@
+#This is example of adc reading ( temperature value) with interrupt and printing it out to serial port
