@@ -1,38 +1,31 @@
-16:38:56 **** Incremental Build of configuration Debug for project 003_ADC_TEMP_SENSOR_INTERRUPT ****
+18:13:58 **** Incremental Build of configuration Debug for project 003_ADC_TEMP_SENSOR_DMA ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "003_ADC_TEMP_SENSOR_INTERRUPT.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\003_ADC_TEMP_SENSOR_INTERRUPT\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="003_ADC_TEMP_SENSOR_INTERRUPT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 003_ADC_TEMP_SENSOR_INTERRUPT.elf
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:116:36: warning: format '%d' expects argument of type 'int', but argument 4 has type 'double' [-Wformat=]
+  116 |     sprintf(msg, "Temperature %d: %d\r\n",i,  temp);
+      |                                   ~^          ~~~~
+      |                                    |          |
+      |                                    int        double
+      |                                   %f
+arm-none-eabi-gcc -o "003_ADC_TEMP_SENSOR_DMA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\003_ADC_TEMP_SENSOR_DMA\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="003_ADC_TEMP_SENSOR_DMA.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 003_ADC_TEMP_SENSOR_DMA.elf
  
-arm-none-eabi-size   003_ADC_TEMP_SENSOR_INTERRUPT.elf 
-arm-none-eabi-objdump -h -S  003_ADC_TEMP_SENSOR_INTERRUPT.elf  > "003_ADC_TEMP_SENSOR_INTERRUPT.list"
-arm-none-eabi-objcopy  -O binary  003_ADC_TEMP_SENSOR_INTERRUPT.elf  "003_ADC_TEMP_SENSOR_INTERRUPT.bin"
+arm-none-eabi-size   003_ADC_TEMP_SENSOR_DMA.elf 
+arm-none-eabi-objdump -h -S  003_ADC_TEMP_SENSOR_DMA.elf  > "003_ADC_TEMP_SENSOR_DMA.list"
    text	   data	    bss	    dec	    hex	filename
-  16020	    120	   1736	  17876	   45d4	003_ADC_TEMP_SENSOR_INTERRUPT.elf
+  29432	    484	   1836	  31752	   7c08	003_ADC_TEMP_SENSOR_DMA.elf
+arm-none-eabi-objcopy  -O binary  003_ADC_TEMP_SENSOR_DMA.elf  "003_ADC_TEMP_SENSOR_DMA.bin"
 Finished building: default.size.stdout
  
-Finished building: 003_ADC_TEMP_SENSOR_INTERRUPT.bin
-Finished building: 003_ADC_TEMP_SENSOR_INTERRUPT.list
+Finished building: 003_ADC_TEMP_SENSOR_DMA.bin
+Finished building: 003_ADC_TEMP_SENSOR_DMA.list
  
  
-16:39:05 **** Incremental Build of configuration Debug for project 003_ADC_TEMP_SENSOR_INTERRUPT ****
+18:14:05 **** Incremental Build of configuration Debug for project 003_ADC_TEMP_SENSOR_DMA ****
 make -j8 all 
-arm-none-eabi-size   003_ADC_TEMP_SENSOR_INTERRUPT.elf 
+arm-none-eabi-size   003_ADC_TEMP_SENSOR_DMA.elf 
    text	   data	    bss	    dec	    hex	filename
-  16020	    120	   1736	  17876	   45d4	003_ADC_TEMP_SENSOR_INTERRUPT.elf
-Finished building: default.size.stdout
- 
-16:39:08 **** Incremental Build of configuration Debug for project 003_ADC_TEMP_SENSOR_INTERRUPT ****
-make -j8 all 
-arm-none-eabi-size   003_ADC_TEMP_SENSOR_INTERRUPT.elf 
-   text	   data	    bss	    dec	    hex	filename
-  16020	    120	   1736	  17876	   45d4	003_ADC_TEMP_SENSOR_INTERRUPT.elf
-Finished building: default.size.stdout
- 
-16:39:15 **** Incremental Build of configuration Debug for project 003_ADC_TEMP_SENSOR_INTERRUPT ****
-make -j8 all 
-arm-none-eabi-size   003_ADC_TEMP_SENSOR_INTERRUPT.elf 
-   text	   data	    bss	    dec	    hex	filename
-  16020	    120	   1736	  17876	   45d4	003_ADC_TEMP_SENSOR_INTERRUPT.elf
+  29432	    484	   1836	  31752	   7c08	003_ADC_TEMP_SENSOR_DMA.elf
 Finished building: default.size.stdout
  
