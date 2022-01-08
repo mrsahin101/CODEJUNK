@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_ADC_TEMP_SENSOR_DMA Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:007_CAN_BUS_BLINKY Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_BLINKY\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_BLINKY\ Debug/activeLaunchTarget=null\:---
@@ -56,6 +56,11 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_ADC_TEMP_SENSOR_INTERRUPT\ 
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_ADC_TEMP_SENSOR_INTERRUPT\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_ADC_TEMP_SENSOR_POLLING\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_ADC_TEMP_SENSOR_POLLING\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:007_CAN_BUS_BLINKY\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:007_CAN_BUS_BLINKY\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:007_CAN_BUS_BLINKY_SLAVE\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:TUT_CAN_F103\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:TUT_CAN_F446\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:bit_banding_blinky\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:bit_banding_blinky\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:bit_banding_blinky_myway\ Debug/activeLaunchMode=run

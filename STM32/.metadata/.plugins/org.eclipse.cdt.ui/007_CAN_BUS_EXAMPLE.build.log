@@ -1,0 +1,41 @@
+10:53:14 **** Incremental Build of configuration Debug for project 007_CAN_BUS_EXAMPLE ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:123:12: error: 'CAN_HandleTypeDef' {aka 'struct __CAN_HandleTypeDef'} has no member named 'pTxMsg'
+  123 |       hcan1.pTxMsg->Data[0] = myLEDVar;
+      |            ^
+../Core/Src/main.c:124:12: error: 'CAN_HandleTypeDef' {aka 'struct __CAN_HandleTypeDef'} has no member named 'pTxMsg'
+  124 |       hcan1.pTxMsg->Data[1] = 0x12;
+      |            ^
+../Core/Src/main.c:125:7: warning: implicit declaration of function 'HAL_CAN_Transmit'; did you mean 'HAL_CAN_DeInit'? [-Wimplicit-function-declaration]
+  125 |       HAL_CAN_Transmit(&hcan1, 20);
+      |       ^~~~~~~~~~~~~~~~
+      |       HAL_CAN_DeInit
+../Core/Src/main.c:126:21: error: 'CAN_TypeDef' {aka 'struct <anonymous>'} has no member named 'HAL_Delay'
+  126 |       hcan1.Instance->
+      |                     ^~
+../Core/Src/main.c: In function 'HAL_CAN_RxCpltCallback':
+../Core/Src/main.c:297:9: error: 'CAN_HandleTypeDef' {aka 'struct __CAN_HandleTypeDef'} has no member named 'pRxMsg'
+  297 |  if(hcan->pRxMsg->StdId == RemoteID)
+      |         ^~
+../Core/Src/main.c:299:18: error: 'CAN_HandleTypeDef' {aka 'struct __CAN_HandleTypeDef'} has no member named 'pRxMsg'
+  299 |   myLEDVar = hcan->pRxMsg->Data[0];
+      |                  ^~
+../Core/Src/main.c:304:2: warning: implicit declaration of function 'HAL_CAN_Receive_IT' [-Wimplicit-function-declaration]
+  304 |  HAL_CAN_Receive_IT(&hcan1, CAN_FIFO0);
+      |  ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:304:29: error: 'CAN_FIFO0' undeclared (first use in this function); did you mean 'CAN_RX_FIFO0'?
+  304 |  HAL_CAN_Receive_IT(&hcan1, CAN_FIFO0);
+      |                             ^~~~~~~~~
+      |                             CAN_RX_FIFO0
+../Core/Src/main.c:304:29: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../Core/Src/main.c:46:28: warning: 'RxHeader' defined but not used [-Wunused-variable]
+   46 | static CAN_RxHeaderTypeDef RxHeader;
+      |                            ^~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+10:53:15 Build Failed. 7 errors, 3 warnings. (took 762ms)
+

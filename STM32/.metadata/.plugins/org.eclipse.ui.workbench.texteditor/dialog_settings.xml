@@ -6,8 +6,14 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="HAL_TIM_OnePulse_Init"/>
+		<item key="selection" value="CAN_Interrupts"/>
 		<list key="findhistory">
+			<item value="CAN_Interrupts"/>
+			<item value="CAN_INT"/>
+			<item value="can"/>
+			<item value="HAL_CAN_Receive_IT"/>
+			<item value="receive"/>
+			<item value="CanRxMsgTypeDef "/>
 			<item value="HAL_TIM_OnePulse_Init"/>
 			<item value="HAL_TIM_OnePulse_Start"/>
 			<item value="HAL_TIM_OC_Start_DMA"/>
