@@ -1,0 +1,10 @@
+17:37:33 **** Incremental Build of configuration Debug for project 003_DAC_DMA_TIMER_TRIGGER_SIN_WAVE ****
+make -j8 all 
+arm-none-eabi-size   003_DAC_DMA_TIMER_TRIGGER_SIN_WAVE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15968	     20	   1756	  17744	   4550	003_DAC_DMA_TIMER_TRIGGER_SIN_WAVE.elf
+Finished building: default.size.stdout
+ 
+
+17:37:34 Build Finished. 0 errors, 0 warnings. (took 479ms)
+
