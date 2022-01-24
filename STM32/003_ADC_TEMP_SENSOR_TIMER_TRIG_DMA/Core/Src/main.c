@@ -49,6 +49,7 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 volatile uint8_t convCompleted = 0;
+uint16_t rawValues[3];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -75,7 +76,7 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
 	char msg[35];
-	  uint16_t rawValues[3];
+
 	  float temp;
   /* USER CODE END 1 */
 
