@@ -114,7 +114,10 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  while(!convCompleted);
+	  while(!convCompleted)
+	  {
+
+	  }
 
 	       for(uint8_t i = 0; i < hadc1.Init.NbrOfConversion; i++) {
 	    	   temp = (((float)rawValues[i]) / 4095) * 3000;

@@ -1,13 +1,6 @@
-12:38:23 **** Incremental Build of configuration Debug for project 003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA ****
+14:07:26 **** Incremental Build of configuration Debug for project 003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:117:4: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
-  117 |    while(!convCompleted);
-      |    ^~~~~
-../Core/Src/main.c:119:9: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
-  119 |         for(uint8_t i = 0; i < hadc1.Init.NbrOfConversion; i++) {
-      |         ^~~
 arm-none-eabi-gcc -o "003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: 003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA.elf
  
@@ -23,5 +16,5 @@ Finished building: 003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA.bin
 Finished building: 003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA.list
  
 
-12:38:25 Build Finished. 0 errors, 1 warnings. (took 1s.678ms)
+14:07:28 Build Finished. 0 errors, 0 warnings. (took 2s.491ms)
 

@@ -29,23 +29,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  12 .ARM.attributes 00000030  00000000  00000000  000201dc  2**0
                   CONTENTS, READONLY
- 13 .debug_info   00010dd3  00000000  00000000  0002020c  2**0
+ 13 .debug_info   00010dd5  00000000  00000000  0002020c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 000021b1  00000000  00000000  00030fdf  2**0
+ 14 .debug_abbrev 000021b1  00000000  00000000  00030fe1  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_aranges 00000dd8  00000000  00000000  00033190  2**3
+ 15 .debug_aranges 00000dd8  00000000  00000000  00033198  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_ranges 00000d10  00000000  00000000  00033f68  2**3
+ 16 .debug_ranges 00000d10  00000000  00000000  00033f70  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_macro  00023346  00000000  00000000  00034c78  2**0
+ 17 .debug_macro  00023346  00000000  00000000  00034c80  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   0000fd4a  00000000  00000000  00057fbe  2**0
+ 18 .debug_line   0000fd4a  00000000  00000000  00057fc6  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000d8f48  00000000  00000000  00067d08  2**0
+ 19 .debug_str    000d8f48  00000000  00000000  00067d10  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000053  00000000  00000000  00140c50  2**0
+ 20 .comment      00000053  00000000  00000000  00140c58  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  00004c24  00000000  00000000  00140ca4  2**2
+ 21 .debug_frame  00004c24  00000000  00000000  00140cac  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -1311,13 +1311,16 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  while(!convCompleted);
+	  while(!convCompleted)
  8000f72:	bf00      	nop
  8000f74:	4b41      	ldr	r3, [pc, #260]	; (800107c <main+0x13c>)
  8000f76:	781b      	ldrb	r3, [r3, #0]
  8000f78:	b2db      	uxtb	r3, r3
  8000f7a:	2b00      	cmp	r3, #0
  8000f7c:	d0fa      	beq.n	8000f74 <main+0x34>
+	  {
+
+	  }
 
 	       for(uint8_t i = 0; i < hadc1.Init.NbrOfConversion; i++) {
  8000f7e:	2300      	movs	r3, #0
@@ -1416,7 +1419,7 @@ int main(void)
  8001068:	4b04      	ldr	r3, [pc, #16]	; (800107c <main+0x13c>)
  800106a:	2200      	movs	r2, #0
  800106c:	701a      	strb	r2, [r3, #0]
-	  while(!convCompleted);
+	  while(!convCompleted)
  800106e:	e780      	b.n	8000f72 <main+0x32>
  8001070:	20000210 	.word	0x20000210
  8001074:	20000208 	.word	0x20000208
