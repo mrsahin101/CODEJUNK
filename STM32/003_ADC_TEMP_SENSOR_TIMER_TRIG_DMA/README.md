@@ -1,0 +1,1 @@
+# This example: ADC with DMA transfer with Timer Trigger. The timer trigger the transfer every 1 second dma transfer from ADC data register into Memory. then When that happens we take those values and print them into COM port
