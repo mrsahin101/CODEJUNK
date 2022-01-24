@@ -1,4 +1,4 @@
-14:38:01 **** Incremental Build of configuration Debug for project 007_CAN_BUS_BLINKY_SLAVE ****
+12:56:35 **** Incremental Build of configuration Debug for project 007_CAN_BUS_BLINKY_SLAVE ****
 make -j8 all 
 arm-none-eabi-size   007_CAN_BUS_BLINKY_SLAVE.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   007_CAN_BUS_BLINKY_SLAVE.elf
 Finished building: default.size.stdout
  
 
-14:38:02 Build Finished. 0 errors, 0 warnings. (took 591ms)
+12:56:37 Build Finished. 0 errors, 0 warnings. (took 1s.38ms)
 

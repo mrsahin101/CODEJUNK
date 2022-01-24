@@ -1,24 +1,31 @@
-14:37:53 **** Incremental Build of configuration Debug for project 007_CAN_BUS_BLINKY_SLAVE ****
+11:34:36 **** Incremental Build of configuration Debug for project 003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "007_CAN_BUS_BLINKY_SLAVE.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\007_CAN_BUS_BLINKY_SLAVE\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="007_CAN_BUS_BLINKY_SLAVE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 007_CAN_BUS_BLINKY_SLAVE.elf
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:116:4: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+  116 |    while(!convCompleted);
+      |    ^~~~~
+../Core/Src/main.c:118:9: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+  118 |         for(uint8_t i = 0; i < hadc1.Init.NbrOfConversion; i++) {
+      |         ^~~
+arm-none-eabi-gcc -o "003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA.elf
  
-arm-none-eabi-size   007_CAN_BUS_BLINKY_SLAVE.elf 
-arm-none-eabi-objdump -h -S  007_CAN_BUS_BLINKY_SLAVE.elf  > "007_CAN_BUS_BLINKY_SLAVE.list"
-arm-none-eabi-objcopy  -O binary  007_CAN_BUS_BLINKY_SLAVE.elf  "007_CAN_BUS_BLINKY_SLAVE.bin"
+arm-none-eabi-size   003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA.elf 
+arm-none-eabi-objdump -h -S  003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA.elf  > "003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA.list"
+arm-none-eabi-objcopy  -O binary  003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA.elf  "003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA.bin"
    text	   data	    bss	    dec	    hex	filename
-   9796	     20	   1684	  11500	   2cec	007_CAN_BUS_BLINKY_SLAVE.elf
+  30600	    484	   1908	  32992	   80e0	003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA.elf
 Finished building: default.size.stdout
  
-Finished building: 007_CAN_BUS_BLINKY_SLAVE.bin
-Finished building: 007_CAN_BUS_BLINKY_SLAVE.list
+Finished building: 003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA.bin
  
+Finished building: 003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA.list
  
-14:38:01 **** Incremental Build of configuration Debug for project 007_CAN_BUS_BLINKY_SLAVE ****
+11:34:42 **** Incremental Build of configuration Debug for project 003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA ****
 make -j8 all 
-arm-none-eabi-size   007_CAN_BUS_BLINKY_SLAVE.elf 
+arm-none-eabi-size   003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA.elf 
    text	   data	    bss	    dec	    hex	filename
-   9796	     20	   1684	  11500	   2cec	007_CAN_BUS_BLINKY_SLAVE.elf
+  30600	    484	   1908	  32992	   80e0	003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA.elf
 Finished building: default.size.stdout
  

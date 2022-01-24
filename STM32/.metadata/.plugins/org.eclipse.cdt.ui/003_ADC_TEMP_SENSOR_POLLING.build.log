@@ -1,4 +1,4 @@
-16:37:00 **** Incremental Build of configuration Debug for project 003_ADC_TEMP_SENSOR_POLLING ****
+09:41:28 **** Incremental Build of configuration Debug for project 003_ADC_TEMP_SENSOR_POLLING ****
 make -j8 all 
 arm-none-eabi-size   003_ADC_TEMP_SENSOR_POLLING.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   003_ADC_TEMP_SENSOR_POLLING.elf
 Finished building: default.size.stdout
  
 
-16:37:00 Build Finished. 0 errors, 0 warnings. (took 479ms)
+09:41:28 Build Finished. 0 errors, 0 warnings. (took 529ms)
 
