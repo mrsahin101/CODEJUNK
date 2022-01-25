@@ -97,6 +97,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_DAC_Start(&hdac, DAC_CHANNEL_1);
   HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, 0xAAA);
+  HAL_TIM_Base_Start(&htim6);
   HAL_DACEx_TriangleWaveGenerate(&hdac, DAC_CHANNEL_1, 2047);
   /* USER CODE END 2 */
 

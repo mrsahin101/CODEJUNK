@@ -59,6 +59,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_ADC_TEMP_SENSOR_POLLING\ De
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_DAC_DMA_TIMER_TRIGGER_SIN_WAVE\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_DAC_MANUAL_DRIVING\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_DAC_NOISE_GENERATION_TIM_TRIG_DMA\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_DAC_TRIANGULAR_WAVE_DMA_TIMER_TRIGGER\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_DAC_TRIANGULAR_WAVE_DMA_TIMER_TRIGGER\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:007_CAN_BUS_BLINKY\ Debug/activeLaunchMode=run
