@@ -1,0 +1,20 @@
+14:17:20 **** Incremental Build of configuration Debug for project 003_DAC_TRIANGULAR_WAVE_DMA_TIMER_TRIGGER ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "003_DAC_TRIANGULAR_WAVE_DMA_TIMER_TRIGGER.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\003_DAC_TRIANGULAR_WAVE_DMA_TIMER_TRIGGER\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="003_DAC_TRIANGULAR_WAVE_DMA_TIMER_TRIGGER.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 003_DAC_TRIANGULAR_WAVE_DMA_TIMER_TRIGGER.elf
+ 
+arm-none-eabi-size   003_DAC_TRIANGULAR_WAVE_DMA_TIMER_TRIGGER.elf 
+arm-none-eabi-objdump -h -S  003_DAC_TRIANGULAR_WAVE_DMA_TIMER_TRIGGER.elf  > "003_DAC_TRIANGULAR_WAVE_DMA_TIMER_TRIGGER.list"
+arm-none-eabi-objcopy  -O binary  003_DAC_TRIANGULAR_WAVE_DMA_TIMER_TRIGGER.elf  "003_DAC_TRIANGULAR_WAVE_DMA_TIMER_TRIGGER.bin"
+   text	   data	    bss	    dec	    hex	filename
+   9184	     20	   1756	  10960	   2ad0	003_DAC_TRIANGULAR_WAVE_DMA_TIMER_TRIGGER.elf
+Finished building: default.size.stdout
+ 
+Finished building: 003_DAC_TRIANGULAR_WAVE_DMA_TIMER_TRIGGER.bin
+Finished building: 003_DAC_TRIANGULAR_WAVE_DMA_TIMER_TRIGGER.list
+ 
+ 
+
+14:17:21 Build Finished. 0 errors, 0 warnings. (took 1s.382ms)
+

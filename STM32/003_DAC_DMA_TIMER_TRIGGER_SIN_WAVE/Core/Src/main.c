@@ -26,7 +26,7 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-#define PI    3.14159
+#define PI      3.14159
 #define SAMPLES 200
 /* USER CODE END PTD */
 
