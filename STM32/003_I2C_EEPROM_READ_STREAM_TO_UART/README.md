@@ -1,1 +1,2 @@
-# This is i2c EEPROM read example. After reading 32 consecutive by Bytes then we printing it out on UART interface. 
+# This is i2c EEPROM read example. After reading 32 consecutive by Bytes then we printing it out on UART interface.
+Don't forget about pulling up the SCL and SDA lines. I forgot to pull them up and spend a lot of time trying to understand why it's not working. 
