@@ -1,0 +1,1 @@
+# This is i2c example and 24LC256 EEPROM . Writing some string and reading it back to test if read properly it blinks the Green LED
