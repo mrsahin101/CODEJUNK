@@ -1,0 +1,1 @@
+# This is i2c EEPROM read example. After reading 32 consecutive by Bytes then we printing it out on UART interface. 
