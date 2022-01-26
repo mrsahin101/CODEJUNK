@@ -62,6 +62,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_DAC_MANUAL_DRIVING\ Debug/a
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_DAC_NOISE_GENERATION_TIM_TRIG_DMA\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_DAC_TRIANGULAR_WAVE_DMA_TIMER_TRIGGER\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_DAC_TRIANGULAR_WAVE_DMA_TIMER_TRIGGER\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_I2C_EEPROM_READ_STREAM_TO_UART\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_I2C_EEPROM_READ_WRITE\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:007_CAN_BUS_BLINKY\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:007_CAN_BUS_BLINKY\ Debug/activeLaunchTarget=null\:---

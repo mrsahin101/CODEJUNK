@@ -99,6 +99,15 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_UART_Transmit(&huart2, (uint8_t*)wmsg, sizeof(wmsg), HAL_MAX_DELAY);
   HAL_Delay(500);
+  while(my_cursor < 0x7D00)
+  {
+		Read_From_24LCxx(&hi2c1, 0xA0, my_cursor, (uint8_t*) mybuffer, 32);
+		HAL_Delay(1);
+		HAL_UART_Transmit(&huart2, (uint8_t*) mybuffer, 32, HAL_MAX_DELAY);
+		HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
+		HAL_Delay(1);
+		my_cursor = my_cursor + 32;
+  }
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -108,17 +117,6 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  if(my_cursor < 0x0FF0)
-	  {
-		  label:
-		  Read_From_24LCxx(&hi2c1, 0xA0, my_cursor, (uint8_t*)mybuffer, 32);
-		  HAL_Delay(1);
-		  HAL_UART_Transmit(&huart2, (uint8_t*)mybuffer, 32, HAL_MAX_DELAY);
-		  HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
-		  HAL_Delay(1);
-		  my_cursor = my_cursor +32;
-		  goto label;
-	  }
 	  HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_13);
 	  HAL_Delay(200);
   }

@@ -1,4 +1,4 @@
-10:41:40 **** Incremental Build of configuration Debug for project 003_I2C_EEPROM_READ_WRITE ****
+14:36:46 **** Incremental Build of configuration Debug for project 003_I2C_EEPROM_READ_WRITE ****
 make -j8 all 
 arm-none-eabi-size   003_I2C_EEPROM_READ_WRITE.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   003_I2C_EEPROM_READ_WRITE.elf
 Finished building: default.size.stdout
  
 
-10:41:41 Build Finished. 0 errors, 0 warnings. (took 481ms)
+14:36:47 Build Finished. 0 errors, 0 warnings. (took 620ms)
 
