@@ -1,24 +1,24 @@
-14:38:46 **** Incremental Build of configuration Debug for project 003_I2C_EEPROM_READ_STREAM_TO_UART ****
+19:09:07 **** Incremental Build of configuration Debug for project 003_I2C_COMMUNUCATION ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "003_I2C_EEPROM_READ_STREAM_TO_UART.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\003_I2C_EEPROM_READ_STREAM_TO_UART\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="003_I2C_EEPROM_READ_STREAM_TO_UART.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 003_I2C_EEPROM_READ_STREAM_TO_UART.elf
+arm-none-eabi-gcc -o "003_I2C_COMMUNUCATION.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\003_I2C_COMMUNUCATION\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="003_I2C_COMMUNUCATION.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 003_I2C_COMMUNUCATION.elf
  
-arm-none-eabi-size   003_I2C_EEPROM_READ_STREAM_TO_UART.elf 
-arm-none-eabi-objdump -h -S  003_I2C_EEPROM_READ_STREAM_TO_UART.elf  > "003_I2C_EEPROM_READ_STREAM_TO_UART.list"
-arm-none-eabi-objcopy  -O binary  003_I2C_EEPROM_READ_STREAM_TO_UART.elf  "003_I2C_EEPROM_READ_STREAM_TO_UART.bin"
+arm-none-eabi-size   003_I2C_COMMUNUCATION.elf 
+arm-none-eabi-objdump -h -S  003_I2C_COMMUNUCATION.elf  > "003_I2C_COMMUNUCATION.list"
+arm-none-eabi-objcopy  -O binary  003_I2C_COMMUNUCATION.elf  "003_I2C_COMMUNUCATION.bin"
    text	   data	    bss	    dec	    hex	filename
-  12248	     20	   1724	  13992	   36a8	003_I2C_EEPROM_READ_STREAM_TO_UART.elf
+  32224	    484	   1828	  34536	   86e8	003_I2C_COMMUNUCATION.elf
 Finished building: default.size.stdout
  
-Finished building: 003_I2C_EEPROM_READ_STREAM_TO_UART.bin
-Finished building: 003_I2C_EEPROM_READ_STREAM_TO_UART.list
+Finished building: 003_I2C_COMMUNUCATION.bin
  
+Finished building: 003_I2C_COMMUNUCATION.list
  
-14:38:48 **** Incremental Build of configuration Debug for project 003_I2C_EEPROM_READ_STREAM_TO_UART ****
+19:09:13 **** Incremental Build of configuration Debug for project 003_I2C_COMMUNUCATION ****
 make -j8 all 
-arm-none-eabi-size   003_I2C_EEPROM_READ_STREAM_TO_UART.elf 
+arm-none-eabi-size   003_I2C_COMMUNUCATION.elf 
    text	   data	    bss	    dec	    hex	filename
-  12248	     20	   1724	  13992	   36a8	003_I2C_EEPROM_READ_STREAM_TO_UART.elf
+  32224	    484	   1828	  34536	   86e8	003_I2C_COMMUNUCATION.elf
 Finished building: default.size.stdout
  
