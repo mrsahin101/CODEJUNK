@@ -98,7 +98,11 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  // This is Write mode Message.
 	HAL_I2C_Master_Transmit(&hi2c1, 0x0003, (uint8_t*)my_message, sizeof(my_message), HAL_MAX_DELAY);
+	HAL_Delay(500);
+	//This is READ mode Message
+	HAL_I2C_Master_Receive(&hi2c1, 0x0003, (uint8_t*)my_message, sizeof(my_message), HAL_MAX_DELAY);
 	HAL_Delay(500);
   }
   /* USER CODE END 3 */
