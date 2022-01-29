@@ -33,14 +33,14 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define TEMP_OUT_INT_REGISTER   0x0
-#define TEMP_OUT_FRAC_REGISTER  0x1
-#define WHO_AM_I_REGISTER       0xF
+#define TEMP_OUT_INT_REGISTER   0x00
+#define TEMP_OUT_FRAC_REGISTER  0x01
+#define WHO_AM_I_REGISTER       0x0F
 #define WHO_AM_I_VALUE          0xBC
-#define TRANSFER_DIR_WRITE      0x1
-#define TRANSFER_DIR_READ       0x0
-#define I2C_SLAVE_ADDR          0x33
-//#define SLAVE_BOARD
+#define TRANSFER_DIR_WRITE      0x01
+#define TRANSFER_DIR_READ       0x00
+#define I2C_SLAVE_ADDR          0x07
+#define SLAVE_BOARD
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -63,6 +63,7 @@ volatile uint8_t transferDirection, transferRequested;
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_I2C1_Init(void);
+static void MX_ADC1_Init(void);
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
 
@@ -83,10 +84,10 @@ static void MX_ADC1_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	char uartBuf[20];
-	uint8_t i2cBuf[2];
-	float ftemp;
-	int8_t t_frac, t_int;
+	char uartBuf[25];
+	uint8_t i2cBuf[2] = {0};
+	float ftemp,ftemp_temporary;
+	volatile int8_t t_frac = 0, t_int= 0;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -108,10 +109,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_I2C1_Init();
-#ifdef SLAVE_BOARD
   MX_ADC1_Init();
-#endif
-
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 #ifdef SLAVE_BOARD
@@ -120,7 +118,6 @@ int main(void)
 
   MX_ADC1_Init();
   HAL_ADC_Start(&hadc1);
-
   while(1) {
     HAL_I2C_EnableListen_IT(&hi2c1);
     while(!transferRequested) {
@@ -148,7 +145,7 @@ int main(void)
 
     if(transferDirection == TRANSFER_DIR_WRITE) {
       /* Master is sending register address */
-      HAL_I2C_Slave_Sequential_Receive_IT(&hi2c1, i2cBuf, 1, I2C_FIRST_FRAME);
+      HAL_I2C_Slave_Seq_Receive_IT(&hi2c1, i2cBuf, 1, I2C_FIRST_FRAME);
       while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_LISTEN);
 
       switch(i2cBuf[0]) {
@@ -171,49 +168,55 @@ int main(void)
   }
 
 #else //Master board
-
-  while(1)
-  {
+while(1){
 	  i2cBuf[0] = WHO_AM_I_REGISTER;
-	    HAL_I2C_Master_Sequential_Transmit_IT(&hi2c1, I2C_SLAVE_ADDR, i2cBuf,
+	  	HAL_I2C_Master_Seq_Transmit_IT(&hi2c1, I2C_SLAVE_ADDR, i2cBuf,
 	                                          1, I2C_FIRST_FRAME);
 	    while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY);
 
-	    HAL_I2C_Master_Sequential_Receive_IT(&hi2c1, I2C_SLAVE_ADDR, i2cBuf,
+	    HAL_I2C_Master_Seq_Receive_IT(&hi2c1, I2C_SLAVE_ADDR, i2cBuf,
 	                                         1, I2C_LAST_FRAME);
 	    while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY);
 
 	    sprintf(uartBuf, "WHO AM I: %x\r\n", i2cBuf[0]);
-	    HAL_UART_Transmit(&huart2, (uint8_t*) uartBuf, strlen(uartBuf), HAL_MAX_DELAY);
+	    HAL_UART_Transmit(&huart2, (uint8_t*) uartBuf, 1, HAL_MAX_DELAY);
 
 	    i2cBuf[0] = TEMP_OUT_INT_REGISTER;
-	    HAL_I2C_Master_Sequential_Transmit_IT(&hi2c1, I2C_SLAVE_ADDR, i2cBuf,
+	    HAL_I2C_Master_Seq_Transmit_IT(&hi2c1, I2C_SLAVE_ADDR, i2cBuf,
 	                                          1, I2C_FIRST_FRAME);
 	    while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY);
 
-	    HAL_I2C_Master_Sequential_Receive_IT(&hi2c1, I2C_SLAVE_ADDR, (uint8_t*)&t_int,
+	    HAL_I2C_Master_Seq_Receive_IT(&hi2c1, I2C_SLAVE_ADDR, (uint8_t*)&t_int,
 	                                         1, I2C_LAST_FRAME);
 	    while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY);
 
 	    i2cBuf[0] = TEMP_OUT_FRAC_REGISTER;
-	    HAL_I2C_Master_Sequential_Transmit_IT(&hi2c1, I2C_SLAVE_ADDR, i2cBuf,
+	    HAL_I2C_Master_Seq_Transmit_IT(&hi2c1, I2C_SLAVE_ADDR, i2cBuf,
 	                                          1, I2C_FIRST_FRAME);
 	    while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY);
 
-	    HAL_I2C_Master_Sequential_Receive_IT(&hi2c1, I2C_SLAVE_ADDR, (uint8_t*)&t_frac,
+	    HAL_I2C_Master_Seq_Receive_IT(&hi2c1, I2C_SLAVE_ADDR, (uint8_t*)&t_frac,
 	                                         1, I2C_LAST_FRAME);
 	    while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY);
-
+/*
+	    ftemp = t_int;
+	    ftemp_temporary = t_frac;
+	    ftemp_temporary = (ftemp_temporary)/100;
+	    ftemp += ftemp_temporary;
+*/
 	    ftemp = ((float)t_frac)/100.0;
-	    ftemp += (float)t_int;
+	      ftemp += (float)t_int;
 
+	    /*sprintf(uartBuf, "t_int: %d\r\n", (uint8_t)t_int);
+	    	    HAL_UART_Transmit(&huart2, (uint8_t*) uartBuf, 1, HAL_MAX_DELAY);
+	    	    HAL_Delay(100);
+	    	    sprintf(uartBuf, "t_frac: %d\r\n", (uint8_t)t_frac);
+	    	    	    HAL_UART_Transmit(&huart2, (uint8_t*) uartBuf, 1, HAL_MAX_DELAY);
+	    	    	    HAL_Delay(100);*/
 	    sprintf(uartBuf, "Temperature: %.2f\r\n", ftemp);
 	    HAL_UART_Transmit(&huart2, (uint8_t*) uartBuf, strlen(uartBuf), HAL_MAX_DELAY);
 	    HAL_Delay(1000);
-  }
-
-
-
+}
 #endif
   /* USER CODE END 2 */
 
@@ -276,7 +279,6 @@ void SystemClock_Config(void)
   * @param None
   * @retval None
   */
-#ifdef SLAVE_BOARD
 static void MX_ADC1_Init(void)
 {
 
@@ -321,7 +323,7 @@ static void MX_ADC1_Init(void)
   /* USER CODE END ADC1_Init 2 */
 
 }
-#endif
+
 /**
   * @brief I2C1 Initialization Function
   * @param None
@@ -340,7 +342,7 @@ static void MX_I2C1_Init(void)
   hi2c1.Instance = I2C1;
   hi2c1.Init.ClockSpeed = 100000;
   hi2c1.Init.DutyCycle = I2C_DUTYCYCLE_2;
-  hi2c1.Init.OwnAddress1 = 0;
+  hi2c1.Init.OwnAddress1 = I2C_SLAVE_ADDR;
   hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
   hi2c1.Init.OwnAddress2 = 0;
@@ -405,6 +407,7 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+#ifdef SLAVE_BOARD
 void HAL_I2C_AddrCallback(I2C_HandleTypeDef *hi2c, uint8_t TransferDirection, uint16_t AddrMatchCode) {
   UNUSED(AddrMatchCode);
 
@@ -413,6 +416,7 @@ void HAL_I2C_AddrCallback(I2C_HandleTypeDef *hi2c, uint8_t TransferDirection, ui
     transferDirection = TransferDirection;
   }
 }
+#endif
 /* USER CODE END 4 */
 
 /**

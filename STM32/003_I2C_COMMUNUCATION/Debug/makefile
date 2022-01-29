@@ -61,7 +61,7 @@ main-build: 003_I2C_COMMUNUCATION.elf secondary-outputs
 
 # Tool invocations
 003_I2C_COMMUNUCATION.elf: $(OBJS) $(USER_OBJS) D:\WORKSPACE\CODEJUNK\STM32\003_I2C_COMMUNUCATION\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "003_I2C_COMMUNUCATION.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\003_I2C_COMMUNUCATION\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="003_I2C_COMMUNUCATION.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "003_I2C_COMMUNUCATION.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\003_I2C_COMMUNUCATION\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="003_I2C_COMMUNUCATION.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
