@@ -1,0 +1,10 @@
+12:40:54 **** Incremental Build of configuration Debug for project 003_I2C_COMMUNICATION_SLAVE ****
+make -j8 all 
+arm-none-eabi-size   003_I2C_COMMUNICATION_SLAVE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13760	     20	   1668	  15448	   3c58	003_I2C_COMMUNICATION_SLAVE.elf
+Finished building: default.size.stdout
+ 
+
+12:40:55 Build Finished. 0 errors, 0 warnings. (took 608ms)
+

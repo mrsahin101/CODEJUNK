@@ -19,4 +19,14 @@
 			<item value="com.st.stm32cube.common.projectcreation.ui.category"/>
 		</list>
 	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\HP\STM32Cube\Example\NEW\I2C_TwoBoards_AdvComIT\SW4STM32\STM32F4-Discovery"/>
+			<item value="C:\Users\HP\STM32Cube\Example\I2C_TwoBoards_AdvComIT\SW4STM32\STM32F4-Discovery"/>
+		</list>
+	</section>
 </section>

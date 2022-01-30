@@ -1,0 +1,10 @@
+14:47:02 **** Incremental Build of configuration Debug for project I2C_TwoBoards_AdvComIT ****
+make -j8 all 
+arm-none-eabi-size   STM32F4-Discovery.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8396	    120	   1732	  10248	   2808	STM32F4-Discovery.elf
+Finished building: default.size.stdout
+ 
+
+14:47:03 Build Finished. 0 errors, 0 warnings. (took 920ms)
+

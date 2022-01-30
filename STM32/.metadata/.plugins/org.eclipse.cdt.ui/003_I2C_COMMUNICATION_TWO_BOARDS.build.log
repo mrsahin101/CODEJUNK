@@ -1,0 +1,107 @@
+14:08:15 **** Incremental Build of configuration Debug for project 003_I2C_COMMUNICATION_TWO_BOARDS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:52:19: error: 'RXBUFFERSIZE' undeclared here (not in a function); did you mean 'TXBUFFERSIZE'?
+   52 | uint8_t aRxBuffer[RXBUFFERSIZE];
+      |                   ^~~~~~~~~~~~
+      |                   TXBUFFERSIZE
+../Core/Src/main.c:63:13: error: static declaration of 'SystemClock_Config' follows non-static declaration
+   63 | static void SystemClock_Config(void);
+      |             ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:59:6: note: previous declaration of 'SystemClock_Config' was here
+   59 | void SystemClock_Config(void);
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:66:13: error: static declaration of 'Error_Handler' follows non-static declaration
+   66 | static void Error_Handler(void);
+      |             ^~~~~~~~~~~~~
+In file included from ../Core/Src/main.c:20:
+../Core/Inc/main.h:53:6: note: previous declaration of 'Error_Handler' was here
+   53 | void Error_Handler(void);
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:39:29: warning: implicit declaration of function 'COUNTOF' [-Wimplicit-function-declaration]
+   39 | #define TXBUFFERSIZE       (COUNTOF(aTxBuffer) - 1)
+      |                             ^~~~~~~
+../Core/Src/main.c:111:18: note: in expansion of macro 'TXBUFFERSIZE'
+  111 |     hTxNumData = TXBUFFERSIZE;
+      |                  ^~~~~~~~~~~~
+../Core/Src/main.c:120:37: error: lvalue required as unary '&' operand
+  120 |       if(HAL_I2C_Master_Transmit_IT(&I2C1, (uint16_t)I2C_ADDRESS, (uint8_t*)&bTransferRequest, 1)!= HAL_OK)
+      |                                     ^
+../Core/Src/main.c:126:31: error: lvalue required as unary '&' operand
+  126 |       while (HAL_I2C_GetState(&I2C1) != HAL_I2C_STATE_READY)
+      |                               ^
+../Core/Src/main.c:133:28: error: lvalue required as unary '&' operand
+  133 |     while(HAL_I2C_GetError(&I2C1) == HAL_I2C_ERROR_AF);
+      |                            ^
+../Core/Src/main.c:138:37: error: lvalue required as unary '&' operand
+  138 |       if(HAL_I2C_Master_Transmit_IT(&I2C1, (uint16_t)I2C_ADDRESS, (uint8_t*)&hTxNumData, 2)!= HAL_OK)
+      |                                     ^
+../Core/Src/main.c:150:31: error: lvalue required as unary '&' operand
+  150 |       while (HAL_I2C_GetState(&I2C1) != HAL_I2C_STATE_READY)
+      |                               ^
+../Core/Src/main.c:157:28: error: lvalue required as unary '&' operand
+  157 |     while(HAL_I2C_GetError(&I2C1) == HAL_I2C_ERROR_AF);
+      |                            ^
+../Core/Src/main.c:162:37: error: lvalue required as unary '&' operand
+  162 |       if(HAL_I2C_Master_Transmit_IT(&I2C1, (uint16_t)I2C_ADDRESS, (uint8_t*)aTxBuffer, TXBUFFERSIZE)!= HAL_OK)
+      |                                     ^
+In file included from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:133,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:30,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:29,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:275,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h:1078:29: warning: passing argument 1 of 'HAL_I2C_GetState' from incompatible pointer type [-Wincompatible-pointer-types]
+ 1078 | #define I2C1                ((I2C_TypeDef *) I2C1_BASE)
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                             |
+      |                             I2C_TypeDef * {aka struct <anonymous> *}
+../Core/Src/main.c:174:31: note: in expansion of macro 'I2C1'
+  174 |       while (HAL_I2C_GetState(I2C1) != HAL_I2C_STATE_READY)
+      |                               ^~~~
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:359,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h:631:58: note: expected 'I2C_HandleTypeDef *' {aka 'struct <anonymous> *'} but argument is of type 'I2C_TypeDef *' {aka 'struct <anonymous> *'}
+  631 | HAL_I2C_StateTypeDef HAL_I2C_GetState(I2C_HandleTypeDef *hi2c);
+      |                                       ~~~~~~~~~~~~~~~~~~~^~~~
+../Core/Src/main.c:181:28: error: lvalue required as unary '&' operand
+  181 |     while(HAL_I2C_GetError(&I2C1) == HAL_I2C_ERROR_AF);
+      |                            ^
+../Core/Src/main.c:189:37: error: lvalue required as unary '&' operand
+  189 |       if(HAL_I2C_Master_Transmit_IT(&I2C1, (uint16_t)I2C_ADDRESS, (uint8_t*)&bTransferRequest, 1)!= HAL_OK)
+      |                                     ^
+../Core/Src/main.c:201:31: error: lvalue required as unary '&' operand
+  201 |       while (HAL_I2C_GetState(&I2C1) != HAL_I2C_STATE_READY)
+      |                               ^
+../Core/Src/main.c:208:28: error: lvalue required as unary '&' operand
+  208 |     while(HAL_I2C_GetError(&I2C1) == HAL_I2C_ERROR_AF);
+      |                            ^
+../Core/Src/main.c:213:37: error: lvalue required as unary '&' operand
+  213 |       if(HAL_I2C_Master_Transmit_IT(&I2C1, (uint16_t)I2C_ADDRESS, (uint8_t*)&hRxNumData, 2)!= HAL_OK)
+      |                                     ^
+../Core/Src/main.c:225:31: error: lvalue required as unary '&' operand
+  225 |       while (HAL_I2C_GetState(&I2C1) != HAL_I2C_STATE_READY)
+      |                               ^
+../Core/Src/main.c:232:28: error: lvalue required as unary '&' operand
+  232 |     while(HAL_I2C_GetError(&I2C1) == HAL_I2C_ERROR_AF);
+      |                            ^
+../Core/Src/main.c:237:37: error: 'I2CxHandle' undeclared (first use in this function)
+  237 |       if(HAL_I2C_Master_Receive_IT(&I2CxHandle, (uint16_t)I2C_ADDRESS, (uint8_t*)aRxBuffer, RXBUFFERSIZE)!= HAL_OK)
+      |                                     ^~~~~~~~~~
+../Core/Src/main.c:237:37: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:64:17: warning: 'Buffercmp' used but never defined
+   64 | static uint16_t Buffercmp(uint8_t *pBuffer1, uint8_t *pBuffer2, uint16_t BufferLength);
+      |                 ^~~~~~~~~
+../Core/Src/main.c:65:13: warning: 'Flush_Buffer' used but never defined
+   65 | static void Flush_Buffer(uint8_t* pBuffer, uint16_t BufferLength);
+      |             ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+14:08:16 Build Failed. 19 errors, 4 warnings. (took 843ms)
+

@@ -33,13 +33,13 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define TEMP_OUT_INT_REGISTER   0x00
-#define TEMP_OUT_FRAC_REGISTER  0x01
-#define WHO_AM_I_REGISTER       0x0F
+#define TEMP_OUT_INT_REGISTER   0x0
+#define TEMP_OUT_FRAC_REGISTER  0x1
+#define WHO_AM_I_REGISTER       0xF
 #define WHO_AM_I_VALUE          0xBC
-#define TRANSFER_DIR_WRITE      0x01
-#define TRANSFER_DIR_READ       0x00
-#define I2C_SLAVE_ADDR          0x07
+#define TRANSFER_DIR_WRITE      0x1
+#define TRANSFER_DIR_READ       0x0
+#define I2C_SLAVE_ADDR          0xAA
 #define SLAVE_BOARD
 /* USER CODE END PD */
 
@@ -86,7 +86,7 @@ int main(void)
   /* USER CODE BEGIN 1 */
 	char uartBuf[25];
 	uint8_t i2cBuf[2] = {0};
-	float ftemp,ftemp_temporary;
+	float ftemp;
 	volatile int8_t t_frac = 0, t_int= 0;
   /* USER CODE END 1 */
 
@@ -130,18 +130,18 @@ int main(void)
 
         t_int = ftemp;
         t_frac = (ftemp - t_int)*100;
-
+        /*
         sprintf(uartBuf, "Temperature: %.2f\r\n", ftemp);
         HAL_UART_Transmit(&huart2, (uint8_t*)uartBuf, strlen(uartBuf), HAL_MAX_DELAY);
 
         sprintf(uartBuf, "t_int: %d - t_frac: %d\r\n", t_int, t_frac);
         HAL_UART_Transmit(&huart2, (uint8_t*)uartBuf, strlen(uartBuf), HAL_MAX_DELAY);
-
+*/
         lastConversion = HAL_GetTick();
       }
     }
 
-    transferRequested = 0;
+
 
     if(transferDirection == TRANSFER_DIR_WRITE) {
       /* Master is sending register address */
@@ -164,6 +164,7 @@ int main(void)
 
       HAL_I2C_Slave_Sequential_Transmit_IT(&hi2c1, i2cBuf, 1, I2C_LAST_FRAME);
       while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY);
+      transferRequested = 0;
     }
   }
 
@@ -340,7 +341,7 @@ static void MX_I2C1_Init(void)
 
   /* USER CODE END I2C1_Init 1 */
   hi2c1.Instance = I2C1;
-  hi2c1.Init.ClockSpeed = 100000;
+  hi2c1.Init.ClockSpeed = 88000;
   hi2c1.Init.DutyCycle = I2C_DUTYCYCLE_2;
   hi2c1.Init.OwnAddress1 = I2C_SLAVE_ADDR;
   hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
@@ -353,7 +354,10 @@ static void MX_I2C1_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN I2C1_Init 2 */
-
+  HAL_NVIC_SetPriority(I2C1_EV_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(I2C1_EV_IRQn);
+  HAL_NVIC_SetPriority(I2C1_ER_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(I2C1_ER_IRQn);
   /* USER CODE END I2C1_Init 2 */
 
 }
@@ -398,11 +402,23 @@ static void MX_USART2_UART_Init(void)
   */
 static void MX_GPIO_Init(void)
 {
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12|GPIO_PIN_13, GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : PD12 PD13 */
+  GPIO_InitStruct.Pin = GPIO_PIN_12|GPIO_PIN_13;
+  GPIO_InitStruct.Mode = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
 }
 
@@ -414,7 +430,14 @@ void HAL_I2C_AddrCallback(I2C_HandleTypeDef *hi2c, uint8_t TransferDirection, ui
   if(hi2c->Instance == I2C1) {
     transferRequested = 1;
     transferDirection = TransferDirection;
+    HAL_I2C_EnableListen_IT(&hi2c1);
+    HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
   }
+}
+void HAL_I2C_ErrorCallback(I2C_HandleTypeDef *hi2c)
+{
+	HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_13);
+
 }
 #endif
 /* USER CODE END 4 */

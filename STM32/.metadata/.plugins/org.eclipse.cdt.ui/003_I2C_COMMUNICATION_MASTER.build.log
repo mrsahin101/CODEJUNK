@@ -1,0 +1,10 @@
+12:19:20 **** Incremental Build of configuration Debug for project 003_I2C_COMMUNICATION_MASTER ****
+make -j8 all 
+arm-none-eabi-size   003_I2C_COMMUNICATION_MASTER.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14508	     20	   1652	  16180	   3f34	003_I2C_COMMUNICATION_MASTER.elf
+Finished building: default.size.stdout
+ 
+
+12:19:20 Build Finished. 0 errors, 0 warnings. (took 651ms)
+

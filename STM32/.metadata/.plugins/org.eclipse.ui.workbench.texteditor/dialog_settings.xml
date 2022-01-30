@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="CAN_Interrupts"/>
+		<item key="selection" value="call"/>
 		<list key="findhistory">
+			<item value="call"/>
 			<item value="CAN_Interrupts"/>
 			<item value="CAN_INT"/>
 			<item value="can"/>
