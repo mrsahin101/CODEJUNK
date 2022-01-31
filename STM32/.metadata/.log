@@ -8204,3 +8204,21 @@ org.eclipse.cdt.managedbuilder.core.BuildException: Unknown serialized value typ
 
 !ENTRY org.eclipse.cdt.core 1 0 2022-01-30 14:36:26.808
 !MESSAGE Indexed 'I2C_TwoBoards_AdvComIT' (18 sources, 39 headers) in 2,94 sec: 3.791 declarations; 30.236 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (%0)
+!SESSION 2022-01-31 14:38:30.854 -----------------------------------------------
+eclipse.buildId=Version 1.8.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=tr_TR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-01-31 14:39:06.158
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-01-31 14:39:20.048
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-01-31 14:39:20.140
+!MESSAGE Log4j initialized with config file D:\WORKSPACE\CODEJUNK\STM32\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-01-31 14:39:36.406
+!MESSAGE Started RMI Server, listening on port 41337

@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2C_TwoBoards_AdvComIT Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_I2C_COMMUNICATION_TWO_BOARD Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_BLINKY\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_BLINKY\ Debug/activeLaunchTarget=null\:---
@@ -64,6 +64,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_DAC_TRIANGULAR_WAVE_DMA_TIM
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_DAC_TRIANGULAR_WAVE_DMA_TIMER_TRIGGER\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_I2C_COMMUNICATION_MASTER\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_I2C_COMMUNICATION_MASTER\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_I2C_COMMUNICATION_TWO_BOARD\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_I2C_COMMUNUCATION\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_I2C_COMMUNUCATION\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_I2C_EEPROM_READ_STREAM_TO_UART\ Debug/activeLaunchMode=run
