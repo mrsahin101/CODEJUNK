@@ -1,0 +1,1 @@
+# This is I2C example using 2 Discovery Board. Master board transmits the message. Slave board listen the message. 
