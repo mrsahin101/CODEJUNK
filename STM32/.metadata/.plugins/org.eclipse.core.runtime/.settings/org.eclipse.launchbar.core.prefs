@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_I2C_COMMUNICATION_TWO_BOARD Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:011_RTC Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_BLINKY\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_BLINKY\ Debug/activeLaunchTarget=null\:---
@@ -76,6 +76,8 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_I2C_POLLING_TRANSMIT\ Debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:007_CAN_BUS_BLINKY\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:007_CAN_BUS_BLINKY\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:007_CAN_BUS_BLINKY_SLAVE\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:011_RTC\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:011_RTC\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2C_TwoBoards_AdvComIT\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2C_TwoBoards_AdvComIT\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:TUT_CAN_F103\ Debug/activeLaunchMode=run

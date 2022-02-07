@@ -1,0 +1,1 @@
+# This is simple project how to use RTC to set alarms and once that alarm happens it will generate interrupt. If we want to do some work we can do it in callback function. Also we can write the time to flash so we can keep track of it. check documentation for further details.

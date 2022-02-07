@@ -1,0 +1,10 @@
+20:51:45 **** Incremental Build of configuration Debug for project 011_RTC ****
+make -j8 all 
+arm-none-eabi-size   011_RTC.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8752	     20	   1628	  10400	   28a0	011_RTC.elf
+Finished building: default.size.stdout
+ 
+
+20:51:46 Build Finished. 0 errors, 0 warnings. (took 551ms)
+
