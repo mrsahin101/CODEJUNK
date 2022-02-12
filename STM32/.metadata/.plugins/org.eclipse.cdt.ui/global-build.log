@@ -1,24 +1,31 @@
-20:51:38 **** Incremental Build of configuration Debug for project 011_RTC ****
+13:55:04 **** Incremental Build of configuration Debug for project 001_BLINKY_WITH_REGISTERS ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "011_RTC.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\011_RTC\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="011_RTC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 011_RTC.elf
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:22:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   22 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:34:20: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   34 |  uint32_t *myptr = 0x40023830;
+      |                    ^~~~~~~~~~
+arm-none-eabi-gcc -o "001_BLINKY_WITH_REGISTERS.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\001_BLINKY_WITH_REGISTERS\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_BLINKY_WITH_REGISTERS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_BLINKY_WITH_REGISTERS.elf
  
-arm-none-eabi-size   011_RTC.elf 
-arm-none-eabi-objdump -h -S  011_RTC.elf  > "011_RTC.list"
-arm-none-eabi-objcopy  -O binary  011_RTC.elf  "011_RTC.bin"
+arm-none-eabi-size   001_BLINKY_WITH_REGISTERS.elf 
+arm-none-eabi-objdump -h -S  001_BLINKY_WITH_REGISTERS.elf  > "001_BLINKY_WITH_REGISTERS.list"
+arm-none-eabi-objcopy  -O binary  001_BLINKY_WITH_REGISTERS.elf  "001_BLINKY_WITH_REGISTERS.bin"
    text	   data	    bss	    dec	    hex	filename
-   8752	     20	   1628	  10400	   28a0	011_RTC.elf
+    796	      8	   1568	   2372	    944	001_BLINKY_WITH_REGISTERS.elf
 Finished building: default.size.stdout
  
-Finished building: 011_RTC.list
-Finished building: 011_RTC.bin
+Finished building: 001_BLINKY_WITH_REGISTERS.list
+Finished building: 001_BLINKY_WITH_REGISTERS.bin
  
  
-20:51:45 **** Incremental Build of configuration Debug for project 011_RTC ****
+13:56:17 **** Incremental Build of configuration Debug for project 001_BLINKY_WITH_REGISTERS ****
 make -j8 all 
-arm-none-eabi-size   011_RTC.elf 
+arm-none-eabi-size   001_BLINKY_WITH_REGISTERS.elf 
    text	   data	    bss	    dec	    hex	filename
-   8752	     20	   1628	  10400	   28a0	011_RTC.elf
+    796	      8	   1568	   2372	    944	001_BLINKY_WITH_REGISTERS.elf
 Finished building: default.size.stdout
  
