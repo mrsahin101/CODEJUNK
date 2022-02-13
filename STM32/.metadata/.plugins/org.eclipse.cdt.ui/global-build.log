@@ -1,6 +1,5 @@
-21:23:23 **** Build of configuration Debug for project 012_LINKER_BLINK_BARE_METAL ****
+22:30:34 **** Incremental Build of configuration Debug for project 012_LINKER_BLINK_BARE_METAL ****
 make all 
-arm-none-eabi-gcc "../main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"main.d" -MT"main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "main.o"
 arm-none-eabi-gcc -o "012_LINKER_BLINK_BARE_METAL.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\012_LINKER_BLINK_BARE_METAL\ldscript.ld" -Wl,-Map="012_LINKER_BLINK_BARE_METAL.map" -nostartfiles -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: 012_LINKER_BLINK_BARE_METAL.elf
  
@@ -14,11 +13,4 @@ Finished building: 012_LINKER_BLINK_BARE_METAL.list
  
 arm-none-eabi-objcopy  -O binary  012_LINKER_BLINK_BARE_METAL.elf  "012_LINKER_BLINK_BARE_METAL.bin"
 Finished building: 012_LINKER_BLINK_BARE_METAL.bin
- 
-21:23:42 **** Incremental Build of configuration Debug for project 012_LINKER_BLINK_BARE_METAL ****
-make all 
-arm-none-eabi-size   012_LINKER_BLINK_BARE_METAL.elf 
-   text	   data	    bss	    dec	    hex	filename
-    136	      0	      0	    136	     88	012_LINKER_BLINK_BARE_METAL.elf
-Finished building: default.size.stdout
  
