@@ -1,0 +1,7 @@
+#include "test.h"
+
+void mesaj (void)
+{
+	int i = 10;
+	while(i--);
+}

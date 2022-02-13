@@ -1,0 +1,10 @@
+22:41:20 **** Incremental Build of configuration Debug for project 012_LINKER_BLINKY ****
+make -j8 all 
+arm-none-eabi-size   012_LINKER_BLINKY.elf 
+   text	   data	    bss	    dec	    hex	filename
+    736	      0	      0	    736	    2e0	012_LINKER_BLINKY.elf
+Finished building: default.size.stdout
+ 
+
+22:41:22 Build Finished. 0 errors, 0 warnings. (took 1s.920ms)
+

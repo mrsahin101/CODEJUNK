@@ -1,31 +1,24 @@
-13:55:04 **** Incremental Build of configuration Debug for project 001_BLINKY_WITH_REGISTERS ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c:22:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
-   22 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
-      |    ^~~~~~~
-../Src/main.c: In function 'main':
-../Src/main.c:34:20: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
-   34 |  uint32_t *myptr = 0x40023830;
-      |                    ^~~~~~~~~~
-arm-none-eabi-gcc -o "001_BLINKY_WITH_REGISTERS.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\001_BLINKY_WITH_REGISTERS\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_BLINKY_WITH_REGISTERS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 001_BLINKY_WITH_REGISTERS.elf
+21:23:23 **** Build of configuration Debug for project 012_LINKER_BLINK_BARE_METAL ****
+make all 
+arm-none-eabi-gcc "../main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"main.d" -MT"main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "main.o"
+arm-none-eabi-gcc -o "012_LINKER_BLINK_BARE_METAL.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\012_LINKER_BLINK_BARE_METAL\ldscript.ld" -Wl,-Map="012_LINKER_BLINK_BARE_METAL.map" -nostartfiles -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 012_LINKER_BLINK_BARE_METAL.elf
  
-arm-none-eabi-size   001_BLINKY_WITH_REGISTERS.elf 
-arm-none-eabi-objdump -h -S  001_BLINKY_WITH_REGISTERS.elf  > "001_BLINKY_WITH_REGISTERS.list"
-arm-none-eabi-objcopy  -O binary  001_BLINKY_WITH_REGISTERS.elf  "001_BLINKY_WITH_REGISTERS.bin"
+arm-none-eabi-size   012_LINKER_BLINK_BARE_METAL.elf 
    text	   data	    bss	    dec	    hex	filename
-    796	      8	   1568	   2372	    944	001_BLINKY_WITH_REGISTERS.elf
+    136	      0	      0	    136	     88	012_LINKER_BLINK_BARE_METAL.elf
 Finished building: default.size.stdout
  
-Finished building: 001_BLINKY_WITH_REGISTERS.list
-Finished building: 001_BLINKY_WITH_REGISTERS.bin
+arm-none-eabi-objdump -h -S  012_LINKER_BLINK_BARE_METAL.elf  > "012_LINKER_BLINK_BARE_METAL.list"
+Finished building: 012_LINKER_BLINK_BARE_METAL.list
  
+arm-none-eabi-objcopy  -O binary  012_LINKER_BLINK_BARE_METAL.elf  "012_LINKER_BLINK_BARE_METAL.bin"
+Finished building: 012_LINKER_BLINK_BARE_METAL.bin
  
-13:56:17 **** Incremental Build of configuration Debug for project 001_BLINKY_WITH_REGISTERS ****
-make -j8 all 
-arm-none-eabi-size   001_BLINKY_WITH_REGISTERS.elf 
+21:23:42 **** Incremental Build of configuration Debug for project 012_LINKER_BLINK_BARE_METAL ****
+make all 
+arm-none-eabi-size   012_LINKER_BLINK_BARE_METAL.elf 
    text	   data	    bss	    dec	    hex	filename
-    796	      8	   1568	   2372	    944	001_BLINKY_WITH_REGISTERS.elf
+    136	      0	      0	    136	     88	012_LINKER_BLINK_BARE_METAL.elf
 Finished building: default.size.stdout
  

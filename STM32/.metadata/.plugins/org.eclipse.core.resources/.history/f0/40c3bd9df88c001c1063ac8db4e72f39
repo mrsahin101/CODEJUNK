@@ -1,0 +1,26 @@
+/* memory layout for an STM32F401RE */
+
+MEMORY
+{
+    FLASH (rx)  : ORIGIN = 0x08000000, LENGTH = 1024K
+    SRAM (xrw)  : ORIGIN = 0x20000000, LENGTH = 192K
+}
+
+ENTRY(main)
+/* output sections */
+SECTIONS
+{
+    /* Program code into FLASH */
+    .text : ALIGN(4)
+    {
+        *(.vector_table)    /* Vector table */
+        *(.text)          /* Program code */
+        KEEP(*(.isr_vector))
+    } >FLASH
+ 	
+ 	.data :
+    {
+        *(.data)           
+    } >SRAM
+  
+} 

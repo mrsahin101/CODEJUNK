@@ -1,0 +1,12 @@
+13:42:07 **** Incremental Build of configuration Debug for project 001_BLINKY_WITH_REGISTERS_AND_OWN_COLLECTION_LIBRARIES ****
+make all 
+arm-none-eabi-gcc "../main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -c -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"main.d" -MT"main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "main.o"
+../main.c:1:10: fatal error: stm32f407xx.h: No such file or directory
+    1 | #include "stm32f407xx.h"
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [subdir.mk:19: main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+13:42:08 Build Failed. 2 errors, 0 warnings. (took 522ms)
+

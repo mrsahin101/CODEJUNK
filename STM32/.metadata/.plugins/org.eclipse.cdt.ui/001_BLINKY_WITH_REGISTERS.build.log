@@ -1,0 +1,10 @@
+13:56:17 **** Incremental Build of configuration Debug for project 001_BLINKY_WITH_REGISTERS ****
+make -j8 all 
+arm-none-eabi-size   001_BLINKY_WITH_REGISTERS.elf 
+   text	   data	    bss	    dec	    hex	filename
+    796	      8	   1568	   2372	    944	001_BLINKY_WITH_REGISTERS.elf
+Finished building: default.size.stdout
+ 
+
+13:56:17 Build Finished. 0 errors, 0 warnings. (took 477ms)
+

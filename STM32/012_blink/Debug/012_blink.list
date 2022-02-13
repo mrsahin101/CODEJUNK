@@ -1,0 +1,125 @@
+
+012_blink.elf:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000008  08000000  08000000  00010000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .text.delay   00000028  08000008  08000008  00010008  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .text.main    00000058  08000030  08000030  00010030  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .debug_info   000000a9  00000000  00000000  00010088  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  4 .debug_abbrev 000000b1  00000000  00000000  00010131  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  5 .debug_aranges 00000028  00000000  00000000  000101e2  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  6 .debug_ranges 00000018  00000000  00000000  0001020a  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  7 .debug_macro  00000aef  00000000  00000000  00010222  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  8 .debug_line   000000a8  00000000  00000000  00010d11  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  9 .debug_str    00002f49  00000000  00000000  00010db9  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 10 .comment      00000053  00000000  00000000  00013d02  2**0
+                  CONTENTS, READONLY
+ 11 .ARM.attributes 0000002e  00000000  00000000  00013d55  2**0
+                  CONTENTS, READONLY
+ 12 .debug_frame  00000054  00000000  00000000  00013d84  2**2
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+
+Disassembly of section .text:
+
+08000000 <vector_table>:
+ 8000000:	00 c0 01 20 31 00 00 08                             ... 1...
+
+Disassembly of section .text.delay:
+
+08000008 <delay>:
+};
+
+
+
+
+void delay(void){
+ 8000008:	b480      	push	{r7}
+ 800000a:	b083      	sub	sp, #12
+ 800000c:	af00      	add	r7, sp, #0
+	uint32_t i = 0x000FFFFF;
+ 800000e:	4b07      	ldr	r3, [pc, #28]	; (800002c <delay+0x24>)
+ 8000010:	607b      	str	r3, [r7, #4]
+
+	while(i > 0){
+ 8000012:	e002      	b.n	800001a <delay+0x12>
+		i--;
+ 8000014:	687b      	ldr	r3, [r7, #4]
+ 8000016:	3b01      	subs	r3, #1
+ 8000018:	607b      	str	r3, [r7, #4]
+	while(i > 0){
+ 800001a:	687b      	ldr	r3, [r7, #4]
+ 800001c:	2b00      	cmp	r3, #0
+ 800001e:	d1f9      	bne.n	8000014 <delay+0xc>
+	}
+}
+ 8000020:	bf00      	nop
+ 8000022:	bf00      	nop
+ 8000024:	370c      	adds	r7, #12
+ 8000026:	46bd      	mov	sp, r7
+ 8000028:	bc80      	pop	{r7}
+ 800002a:	4770      	bx	lr
+ 800002c:	000fffff 	.word	0x000fffff
+
+Disassembly of section .text.main:
+
+08000030 <main>:
+int main(void)
+{
+ 8000030:	b580      	push	{r7, lr}
+ 8000032:	af00      	add	r7, sp, #0
+    /* Loop forever */
+	*RCC_AHB1ENR = (1<<3);
+ 8000034:	4b0e      	ldr	r3, [pc, #56]	; (8000070 <main+0x40>)
+ 8000036:	2208      	movs	r2, #8
+ 8000038:	601a      	str	r2, [r3, #0]
+
+	*GPIOD_MODER 	= 0x55000000;
+ 800003a:	4b0e      	ldr	r3, [pc, #56]	; (8000074 <main+0x44>)
+ 800003c:	f04f 42aa 	mov.w	r2, #1426063360	; 0x55000000
+ 8000040:	601a      	str	r2, [r3, #0]
+	*GPIOD_OTYPER 	= 0xFF000000;
+ 8000042:	4b0d      	ldr	r3, [pc, #52]	; (8000078 <main+0x48>)
+ 8000044:	f04f 427f 	mov.w	r2, #4278190080	; 0xff000000
+ 8000048:	601a      	str	r2, [r3, #0]
+	*GPIOD_OSPEEDR 	= 0xFF000000;
+ 800004a:	4b0c      	ldr	r3, [pc, #48]	; (800007c <main+0x4c>)
+ 800004c:	f04f 427f 	mov.w	r2, #4278190080	; 0xff000000
+ 8000050:	601a      	str	r2, [r3, #0]
+	*GPIOD_PUPDR    = 0x00000000;
+ 8000052:	4b0b      	ldr	r3, [pc, #44]	; (8000080 <main+0x50>)
+ 8000054:	2200      	movs	r2, #0
+ 8000056:	601a      	str	r2, [r3, #0]
+
+	while(1){
+
+		*GPIOD_ODR = 0x0000F000;
+ 8000058:	4b0a      	ldr	r3, [pc, #40]	; (8000084 <main+0x54>)
+ 800005a:	f44f 4270 	mov.w	r2, #61440	; 0xf000
+ 800005e:	601a      	str	r2, [r3, #0]
+		delay();
+ 8000060:	f7ff ffd2 	bl	8000008 <delay>
+		*GPIOD_ODR = 0x00000000;
+ 8000064:	4b07      	ldr	r3, [pc, #28]	; (8000084 <main+0x54>)
+ 8000066:	2200      	movs	r2, #0
+ 8000068:	601a      	str	r2, [r3, #0]
+		delay();
+ 800006a:	f7ff ffcd 	bl	8000008 <delay>
+		*GPIOD_ODR = 0x0000F000;
+ 800006e:	e7f3      	b.n	8000058 <main+0x28>
+ 8000070:	40023830 	.word	0x40023830
+ 8000074:	40020c00 	.word	0x40020c00
+ 8000078:	40020c04 	.word	0x40020c04
+ 800007c:	40020c08 	.word	0x40020c08
+ 8000080:	40020c0c 	.word	0x40020c0c
+ 8000084:	40020c14 	.word	0x40020c14

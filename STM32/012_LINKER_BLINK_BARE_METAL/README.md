@@ -1,0 +1,1 @@
+# This is bare metal application simple blinky example. It toggles 4 user led. This is only 136 bytes of binary file enough to blink the leds. but of course the vector table is so minimal and wont be usefull for proper application development. 
