@@ -26,6 +26,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\HP\STM32Cube\Example\LwIP_HTTP_Server_Netconn_RTOS\SW4STM32\STM32746G_Nucleo"/>
+			<item value="C:\Users\HP\STM32Cube\Example\PWR_CurrentConsumption\SW4STM32\STM32746ZG_Nucleo"/>
 			<item value="C:\Users\HP\STM32Cube\Example\NEW\I2C_TwoBoards_AdvComIT\SW4STM32\STM32F4-Discovery"/>
 			<item value="C:\Users\HP\STM32Cube\Example\I2C_TwoBoards_AdvComIT\SW4STM32\STM32F4-Discovery"/>
 		</list>

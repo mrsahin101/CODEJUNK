@@ -1,10 +1,10 @@
-11:06:53 **** Incremental Build of configuration Debug for project 002_TIMER_PWM_SIN_WAVE_GENERATION ****
+15:40:08 **** Incremental Build of configuration Debug for project 002_TIMER_PWM_SIN_WAVE_GENERATION ****
 make -j8 all 
 arm-none-eabi-size   002_TIMER_PWM_SIN_WAVE_GENERATION.elf 
    text	   data	    bss	    dec	    hex	filename
-  17732	     20	   1740	  19492	   4c24	002_TIMER_PWM_SIN_WAVE_GENERATION.elf
+  17796	     20	   1740	  19556	   4c64	002_TIMER_PWM_SIN_WAVE_GENERATION.elf
 Finished building: default.size.stdout
  
 
-11:06:54 Build Finished. 0 errors, 0 warnings. (took 879ms)
+15:40:08 Build Finished. 0 errors, 0 warnings. (took 420ms)
 

@@ -1,8 +1,10 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:012_blink Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:012_LINKER_BLINK_BARE_METAL Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:020_USB_OTG_VCP_BLINKY Debug
 eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_BLINKY\ Debug\ (1)/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_BLINKY\ Debug\ (1)/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_BLINKY\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_BLINKY\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_BLINKY_WITH_REGISTERS\ Debug/activeLaunchMode=debug
@@ -16,6 +18,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_Gpio_Toggle_sleve_rate_002\
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_interacting_with_console\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_interacting_with_console\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_interacting_with_console_callbacks\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_interacting_with_console_callbacks\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_interacting_with_console_interrupt\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_with_DMA\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_UART_with_DMA_Periph_To_Memory\ Debug/activeLaunchMode=debug
@@ -37,6 +40,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_EXTERNAL_CLOCK_SOURCE
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_EXTERNAL_CLOCK_SOURCE_WITH_MCO_ETR\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_EXTERNAL_CLOCK_SOURCE_WITH_MCO_ETR\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_INPUT_CAPTURE\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_INPUT_CAPTURE\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_MCO_OUTPUT\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_ONE_PULSE\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_OUTPUT_COMPARE/activeLaunchMode=run
@@ -49,6 +53,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_OUTPUT_COMPARE_with_D
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_OUTPUT_COMPARE_with_DMA\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_PWM_GENERATION\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_PWM_SIN_WAVE_GENERATION\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_PWM_SIN_WAVE_GENERATION\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_with_DMA_Led_Blinky\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_with_DMA_Led_Blinky\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_TIMER_with_INTERRUPT\ Debug/activeLaunchMode=run
@@ -60,6 +65,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_ADC_TEMP_SENSOR_POLLING\ De
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_ADC_TEMP_SENSOR_POLLING\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_ADC_TEMP_SENSOR_TIMER_TRIG_DMA\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_DAC_DMA_TIMER_TRIGGER_SIN_WAVE\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_DAC_DMA_TIMER_TRIGGER_SIN_WAVE\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_DAC_MANUAL_DRIVING\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_DAC_NOISE_GENERATION_TIM_TRIG_DMA\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_DAC_TRIANGULAR_WAVE_DMA_TIMER_TRIGGER\ Debug/activeLaunchMode=run
@@ -81,7 +87,17 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:007_CAN_BUS_BLINKY_SLAVE\ Debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:011_RTC\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:011_RTC\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:012_LINKER_BLINKY\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:012_LINKER_BLINK_BARE_METAL\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:012_LINKER_BLINK_BARE_METAL\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:012_LINKER_SCRIPT_BLINKY\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:015_ETHERNET_MII_MEM_CFNG_INTRODUCTION\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:015_ETHERNET_MII_MEM_CFNG_INTRODUCTION\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:015_ETHERNET_RMII_TCP_IP_CLIENT_CONFIG\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:015_ETHERNET_RMII_TCP_IP_CLIENT_CONFIG\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:015_ETHERNET_RMII_TCP_IP_SERVER_N_F746\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:015_ETHERNET_RMII_TCP_IP_SERVER_N_F746\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:020_USB_OTG_VCP_BLINKY\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:020_USB_OTG_VCP_BLINKY\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2C_TwoBoards_AdvComIT\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:I2C_TwoBoards_AdvComIT\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:TUT_CAN_F103\ Debug/activeLaunchMode=run
@@ -90,3 +106,4 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:bit_banding_blinky\ Debug/activ
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:bit_banding_blinky\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:bit_banding_blinky_myway\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:bit_banding_blinky_myway\ Debug/activeLaunchTarget=null\:---
+org.eclipse.launchbar.core.descriptorType.default\:001_BLINKY\ Debug\ (1)/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

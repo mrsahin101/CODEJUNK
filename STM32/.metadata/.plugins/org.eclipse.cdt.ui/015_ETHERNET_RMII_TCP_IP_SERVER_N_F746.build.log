@@ -1,0 +1,10 @@
+11:11:21 **** Incremental Build of configuration Debug for project 015_ETHERNET_RMII_TCP_IP_SERVER_N_F746 ****
+make -j8 all 
+arm-none-eabi-size   015_ETHERNET_RMII_TCP_IP_SERVER_N_F746.elf 
+   text	   data	    bss	    dec	    hex	filename
+  74184	    128	  36880	 111192	  1b258	015_ETHERNET_RMII_TCP_IP_SERVER_N_F746.elf
+Finished building: default.size.stdout
+ 
+
+11:11:22 Build Finished. 0 errors, 0 warnings. (took 1s.280ms)
+

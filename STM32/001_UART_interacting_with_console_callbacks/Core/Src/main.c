@@ -129,7 +129,7 @@ void performCriticalTasks(void) {
 }
 void printWelcomeMessage(void) {
   char *strings[] = {"\033[0;0H", "\033[2J", WELCOME_MSG, MAIN_MENU, PROMPT};
-
+	//char *strings[] = {WELCOME_MSG, MAIN_MENU, PROMPT};
   for (uint8_t i = 0; i < 5; i++) {
     UART_Transmit(&huart2, (uint8_t*)strings[i], strlen(strings[i]));
     while (HAL_UART_GetState(&huart2) == HAL_UART_STATE_BUSY_TX || HAL_UART_GetState(&huart2) == HAL_UART_STATE_BUSY_TX_RX);

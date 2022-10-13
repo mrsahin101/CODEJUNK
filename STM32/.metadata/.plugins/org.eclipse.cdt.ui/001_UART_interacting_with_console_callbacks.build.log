@@ -1,10 +1,10 @@
-12:37:13 **** Incremental Build of configuration Debug for project 001_UART_interacting_with_console_callbacks ****
+16:48:20 **** Incremental Build of configuration Debug for project 001_UART_interacting_with_console_callbacks ****
 make -j8 all 
 arm-none-eabi-size   001_UART_interacting_with_console_callbacks.elf 
    text	   data	    bss	    dec	    hex	filename
-  14884	    124	   3684	  18692	   4904	001_UART_interacting_with_console_callbacks.elf
+  15432	    124	   2668	  18224	   4730	001_UART_interacting_with_console_callbacks.elf
 Finished building: default.size.stdout
  
 
-12:37:14 Build Finished. 0 errors, 0 warnings. (took 536ms)
+16:48:20 Build Finished. 0 errors, 0 warnings. (took 340ms)
 

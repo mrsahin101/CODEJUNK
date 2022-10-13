@@ -1,0 +1,10 @@
+10:48:44 **** Incremental Build of configuration Debug for project 015_ETHERNET_MII_MEM_CFNG_INTRODUCTION ****
+make -j8 all 
+arm-none-eabi-size   015_ETHERNET_MII_MEM_CFNG_INTRODUCTION.elf 
+   text	   data	    bss	    dec	    hex	filename
+  68924	    128	  36864	 105916	  19dbc	015_ETHERNET_MII_MEM_CFNG_INTRODUCTION.elf
+Finished building: default.size.stdout
+ 
+
+10:48:45 Build Finished. 0 errors, 0 warnings. (took 1s.237ms)
+

@@ -1,0 +1,10 @@
+10:37:49 **** Incremental Build of configuration Debug for project 020_USB_OTG_VCP_BLINKY ****
+make -j8 all 
+arm-none-eabi-size   020_USB_OTG_VCP_BLINKY.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28760	    264	   8816	  37840	   93d0	020_USB_OTG_VCP_BLINKY.elf
+Finished building: default.size.stdout
+ 
+
+10:37:49 Build Finished. 0 errors, 0 warnings. (took 744ms)
+

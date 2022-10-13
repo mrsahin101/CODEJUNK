@@ -1,5 +1,5 @@
-ringbuffer.c:12:10:RingBuffer_GetFreeSpace	16	static
-ringbuffer.c:22:10:RingBuffer_GetDataLength	16	static
-ringbuffer.c:27:6:RingBuffer_Init	16	static
-ringbuffer.c:32:10:RingBuffer_Read	32	static
-ringbuffer.c:42:9:RingBuffer_Write	32	static
+../Core/Src/ringbuffer.c:12:10:RingBuffer_GetFreeSpace	16	static
+../Core/Src/ringbuffer.c:22:10:RingBuffer_GetDataLength	16	static
+../Core/Src/ringbuffer.c:27:6:RingBuffer_Init	16	static
+../Core/Src/ringbuffer.c:32:10:RingBuffer_Read	32	static
+../Core/Src/ringbuffer.c:42:9:RingBuffer_Write	32	static

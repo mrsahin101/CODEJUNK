@@ -6,20 +6,23 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="call"/>
+		<item key="selection" value="Buf"/>
 		<list key="findhistory">
+			<item value="Buf"/>
+			<item value="UartReady"/>
+			<item value="tcp_write"/>
+			<item value="1024"/>
+			<item value="sent"/>
+			<item value="tcp_recved"/>
+			<item value="trash"/>
+			<item value="75"/>
+			<item value="hello"/>
 			<item value="call"/>
 			<item value="CAN_Interrupts"/>
 			<item value="CAN_INT"/>
 			<item value="can"/>
 			<item value="HAL_CAN_Receive_IT"/>
 			<item value="receive"/>
-			<item value="CanRxMsgTypeDef "/>
-			<item value="HAL_TIM_OnePulse_Init"/>
-			<item value="HAL_TIM_OnePulse_Start"/>
-			<item value="HAL_TIM_OC_Start_DMA"/>
-			<item value="hal_tim_base_Start"/>
-			<item value="OscillatorType"/>
 		</list>
 		<list key="replacehistory">
 		</list>

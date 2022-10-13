@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (9-2020-q2-update)
+# Toolchain: GNU Tools for STM32 (10.3-2021.10)
 ################################################################################
 
 -include ../makefile.init
@@ -43,14 +43,14 @@ BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ART
 EXECUTABLES += \
 002_TIMER_OUTPUT_COMPARE.elf \
 
+MAP_FILES += \
+002_TIMER_OUTPUT_COMPARE.map \
+
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
 002_TIMER_OUTPUT_COMPARE.list \
-
-OBJCOPY_BIN += \
-002_TIMER_OUTPUT_COMPARE.bin \
 
 
 # All Target
@@ -60,7 +60,7 @@ all: main-build
 main-build: 002_TIMER_OUTPUT_COMPARE.elf secondary-outputs
 
 # Tool invocations
-002_TIMER_OUTPUT_COMPARE.elf: $(OBJS) $(USER_OBJS) D:\WORKSPACE\CODEJUNK\STM32\002_TIMER_OUTPUT_COMPARE\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+002_TIMER_OUTPUT_COMPARE.elf 002_TIMER_OUTPUT_COMPARE.map: $(OBJS) $(USER_OBJS) D:\WORKSPACE\CODEJUNK\STM32\002_TIMER_OUTPUT_COMPARE\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-gcc -o "002_TIMER_OUTPUT_COMPARE.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\002_TIMER_OUTPUT_COMPARE\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="002_TIMER_OUTPUT_COMPARE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
@@ -75,17 +75,12 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-002_TIMER_OUTPUT_COMPARE.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "002_TIMER_OUTPUT_COMPARE.bin"
-	@echo 'Finished building: $@'
-	@echo ' '
-
 # Other Targets
 clean:
-	-$(RM) 002_TIMER_OUTPUT_COMPARE.bin 002_TIMER_OUTPUT_COMPARE.elf 002_TIMER_OUTPUT_COMPARE.list default.size.stdout
+	-$(RM) 002_TIMER_OUTPUT_COMPARE.elf 002_TIMER_OUTPUT_COMPARE.list 002_TIMER_OUTPUT_COMPARE.map default.size.stdout
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'

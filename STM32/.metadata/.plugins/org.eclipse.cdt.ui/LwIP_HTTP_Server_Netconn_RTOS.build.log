@@ -1,0 +1,10 @@
+11:41:44 **** Incremental Build of configuration Debug for project LwIP_HTTP_Server_Netconn_RTOS ****
+make -j8 all 
+arm-none-eabi-size   STM32746G_Nucleo.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 109468	    152	  66736	 176356	  2b0e4	STM32746G_Nucleo.elf
+Finished building: default.size.stdout
+ 
+
+11:41:46 Build Finished. 0 errors, 0 warnings. (took 1s.860ms)
+

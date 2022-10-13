@@ -1,0 +1,10 @@
+17:41:28 **** Incremental Build of configuration Debug for project 015_ETHERNET_RMII_TCP_IP_CLIENT_CONFIG ****
+make -j8 all 
+arm-none-eabi-size   015_ETHERNET_RMII_TCP_IP_CLIENT_CONFIG.elf 
+   text	   data	    bss	    dec	    hex	filename
+  77600	    128	  36968	 114696	  1c008	015_ETHERNET_RMII_TCP_IP_CLIENT_CONFIG.elf
+Finished building: default.size.stdout
+ 
+
+17:41:30 Build Finished. 0 errors, 0 warnings. (took 2s.326ms)
+

@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (9-2020-q2-update)
+# Toolchain: GNU Tools for STM32 (10.3-2021.10)
 ################################################################################
 
 -include ../makefile.init
@@ -43,14 +43,14 @@ BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ART
 EXECUTABLES += \
 001_UART_interacting_with_console_interrupt.elf \
 
+MAP_FILES += \
+001_UART_interacting_with_console_interrupt.map \
+
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
 001_UART_interacting_with_console_interrupt.list \
-
-OBJCOPY_BIN += \
-001_UART_interacting_with_console_interrupt.bin \
 
 
 # All Target
@@ -60,7 +60,7 @@ all: main-build
 main-build: 001_UART_interacting_with_console_interrupt.elf secondary-outputs
 
 # Tool invocations
-001_UART_interacting_with_console_interrupt.elf: $(OBJS) $(USER_OBJS) D:\WORKSPACE\CODEJUNK\STM32\001_UART_interacting_with_console_interrupt\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+001_UART_interacting_with_console_interrupt.elf 001_UART_interacting_with_console_interrupt.map: $(OBJS) $(USER_OBJS) D:\WORKSPACE\CODEJUNK\STM32\001_UART_interacting_with_console_interrupt\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-gcc -o "001_UART_interacting_with_console_interrupt.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\WORKSPACE\CODEJUNK\STM32\001_UART_interacting_with_console_interrupt\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_UART_interacting_with_console_interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
@@ -75,17 +75,12 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-001_UART_interacting_with_console_interrupt.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "001_UART_interacting_with_console_interrupt.bin"
-	@echo 'Finished building: $@'
-	@echo ' '
-
 # Other Targets
 clean:
-	-$(RM) 001_UART_interacting_with_console_interrupt.bin 001_UART_interacting_with_console_interrupt.elf 001_UART_interacting_with_console_interrupt.list default.size.stdout
+	-$(RM) 001_UART_interacting_with_console_interrupt.elf 001_UART_interacting_with_console_interrupt.list 001_UART_interacting_with_console_interrupt.map default.size.stdout
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'
